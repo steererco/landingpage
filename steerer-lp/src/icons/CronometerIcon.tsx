@@ -1,6 +1,6 @@
 import React from "react";
 
-export const GlobeIcon = ({ ...props }: React.SVGProps<SVGSVGElement>): JSX.Element => (
+export const CronometerIcon = ({ ...props }: React.SVGProps<SVGSVGElement>): JSX.Element => (
     <svg
         width="24"
         height="24"
