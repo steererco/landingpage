@@ -3,7 +3,7 @@
 import { BlueLogo } from "@/logo/BlueLogo"
 
 export const Header = (): JSX.Element => (
-    <div className="flex flex-row justify-between mx-[20px] py-5 static bg-white">
+    <div className="flex flex-row justify-between mx-20 py-5 static bg-white">
         <BlueLogo className="w-36.5" />
         <div>
             <div className="flex flex-row w-514 justify-around">

@@ -4,7 +4,7 @@ import { HeartRateIcon } from "@/icons/HeartRateIcon"
 
 export const TextRow = () => (
     <>
-        <div className="mx-[20px]">
+        <div className="mx-20">
             <div className="flex justify-between ">
                 <FirstText />
                 <SecondText />
