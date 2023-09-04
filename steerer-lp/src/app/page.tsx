@@ -2,7 +2,7 @@
 
 import { TextRow } from "./components/TextRow"
 import { Header } from "@/components/Header"
-import { TextColumnsRow } from "./components/TextColumnsRow"
+import { Benefits } from "./components/Benefits"
 import { TextImageColumn } from "./components/TextImageColumn"
 import { AboutApp } from "./components/AboutApp"
 import { useState } from "react"
@@ -17,7 +17,7 @@ const Home = (): JSX.Element => {
       <TextRow />
       <AboutApp />
       <TextImageColumn />
-      <TextColumnsRow />
+      <Benefits />
       <Drawer isOpen={openDrawer} setIsOpen={setOpenDrawer} />
     </main >
   )

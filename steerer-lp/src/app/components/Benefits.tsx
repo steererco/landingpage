@@ -2,7 +2,7 @@ import { GraphicIcon } from "@/icons/GraphicIcon";
 import { HeartIcon } from "@/icons/HeartIcon";
 import { StrategyIcon } from "@/icons/StrategyIcon";
 
-export const TextColumnsRow = (): JSX.Element => (
+export const Benefits = (): JSX.Element => (
     <div className="flex flex-col justify-center h-screen bg-white">
         <p className="text-black text-center font-poppins font-medium text-5xl">Designed for those who live and<br />breathe football passion</p>
         <div className="flex flex-row justify-between mx-20">
