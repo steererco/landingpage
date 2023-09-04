@@ -1,17 +1,24 @@
+'use client'
+
 import { TextRow } from "./components/TextRow"
 import { Header } from "@/components/Header"
 import { TextColumnsRow } from "./components/TextColumnsRow"
 import { TextImageColumn } from "./components/TextImageColumn"
 import { AboutApp } from "./components/AboutApp"
+import { useState } from "react"
+import { Drawer } from "@/components/Drawer"
 
 const Home = (): JSX.Element => {
+  const [openDrawer, setOpenDrawer] = useState(false)
+
   return (
     <main className="bg-white h-screen">
-      <Header />
+      <Header isOpen={openDrawer} setIsOpen={setOpenDrawer} />
       <TextRow />
       <AboutApp />
       <TextImageColumn />
       <TextColumnsRow />
+      <Drawer isOpen={openDrawer} setIsOpen={setOpenDrawer} />
     </main >
   )
 }

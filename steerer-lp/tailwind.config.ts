@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        'mobile': '900px', 
+      },
       fontFamily: {
         poppins: ['var(--font-poppins)', ...fontFamily.sans],
         inter: ['var(--font-inter)', ...fontFamily.sans],
