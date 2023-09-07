@@ -7,6 +7,7 @@ import { TextImageColumn } from "./components/TextImageColumn"
 import { AboutApp } from "./components/AboutApp"
 import { useState } from "react"
 import { Drawer } from "@/components/Drawer"
+import { Footer } from "@/components/Footer"
 
 const Home = (): JSX.Element => {
   const [openDrawer, setOpenDrawer] = useState(false)
@@ -18,6 +19,7 @@ const Home = (): JSX.Element => {
       <AboutApp />
       <TextImageColumn />
       <Benefits />
+      <Footer />
       <Drawer isOpen={openDrawer} setIsOpen={setOpenDrawer} />
     </main >
   )
