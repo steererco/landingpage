@@ -3,9 +3,9 @@ import { HeartIcon } from "@/icons/HeartIcon";
 import { StrategyIcon } from "@/icons/StrategyIcon";
 
 export const Benefits = (): JSX.Element => (
-    <div className="flex flex-col justify-center mobile:h-screen bg-white mx-10 mobile:mx-20  self-center">
+    <div className="flex flex-col justify-center mobile:h-screen max-w-[1444px] bg-white mx-10 mobile:mx-20 self-center">
         <p className="text-black text-center font-poppins font-medium text-3xl mobile:text-5xl">Designed for those who live and<br />breathe football passion</p>
-        <div className="flex flex-col mobile:flex-row justify-center items-center mobile:items-start mobile:justify-around">
+        <div className="flex flex-col mobile:flex-row justify-center items-center mobile:items-start mobile:justify-between">
             <FirstItem />
             <SecondItem />
             <ThirdItem />
