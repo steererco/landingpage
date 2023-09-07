@@ -15,9 +15,9 @@ const Home = (): JSX.Element => {
   return (
     <main className="bg-white h-screen">
       <Header isOpen={openDrawer} setIsOpen={setOpenDrawer} />
-      <TextRow />
+      {/* <TextRow />
       <AboutApp />
-      <TextImageColumn />
+      <TextImageColumn /> */}
       <Benefits />
       <Footer />
       <Drawer isOpen={openDrawer} setIsOpen={setOpenDrawer} />
