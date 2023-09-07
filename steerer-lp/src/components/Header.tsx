@@ -13,7 +13,7 @@ export const Header = ({ isOpen, setIsOpen }: { isOpen: boolean, setIsOpen: Disp
         window.addEventListener('resize', handleWindowResize);
 
         return () => window.removeEventListener('resize', handleWindowResize)
-    }, [])
+    }, [handleWindowResize])
 
     return (
         <div className="flex flex-row justify-between mx-10 mobile:mx-20 py-5 static bg-white">

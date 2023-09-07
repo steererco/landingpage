@@ -36,6 +36,6 @@ const ImageBlock = (): JSX.Element => (
 const TextArea = (): JSX.Element => (
     <>
         <p className="text-black text-center font-poppins font-medium text-5xl">Seize the opportunity to advance your skills<br />and knowledge, easily accessible.</p>
-        <p className="text-black text-center mt-8 font-inter font-normal text-xl">With our app, you'll access professional team strategies, precise analyses, and a community<br />of players and coaches who share your drive to win.</p>
+        <p className="text-black text-center mt-8 font-inter font-normal text-xl">With our app, you&apos;ll access professional team strategies, precise analyses, and a community<br />of players and coaches who share your drive to win.</p>
     </>
 )

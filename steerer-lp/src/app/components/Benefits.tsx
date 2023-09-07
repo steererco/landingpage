@@ -20,7 +20,7 @@ const FirstItem = (): JSX.Element => (
                 <StrategyIcon width='36' height='36' />
             </div>
             <p className="mt-[32px] mb-[24px] text-black font-inter text-center text-2xl font-medium" >Professional strategies within reach</p>
-            <p className="text-black text-center font-inter ">Unlock professional tactics and strategies. Elevate your game with insights from football's best minds.</p>
+            <p className="text-black text-center font-inter ">Unlock professional tactics and strategies. Elevate your game with insights from football&apos;s best minds.</p>
         </div>
     </>
 )
