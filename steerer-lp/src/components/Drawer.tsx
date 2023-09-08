@@ -3,6 +3,7 @@ import { CloseIcon } from "@/icons/CloseIcon";
 import { BlueLogo } from "@/logo/BlueLogo";
 import { Dispatch, SetStateAction } from "react";
 import { DefaultButton } from "./DefaultButton";
+import { WaitingListButton } from "./WaitingListButton";
 
 export const Drawer = ({ isOpen, setIsOpen }: { isOpen: boolean, setIsOpen: Dispatch<SetStateAction<boolean>> }): JSX.Element => {
     return (
@@ -24,12 +25,7 @@ export const Drawer = ({ isOpen, setIsOpen }: { isOpen: boolean, setIsOpen: Disp
                     <Header setIsOpen={setIsOpen} />
                     <OptionsList />
                     <div className="w-full flex justify-center">
-                        <DefaultButton onClick={() => { }}>
-                            <div className="flex flex-row items-center">
-                                <p className="pr-6">Join the waiting list</p>
-                                <ArrowIcon />
-                            </div>
-                        </DefaultButton>
+                        <WaitingListButton />
                     </div>
                 </article>
             </section>
