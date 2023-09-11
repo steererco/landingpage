@@ -3,26 +3,27 @@ import { HeartIcon } from "@/icons/HeartIcon";
 import { StrategyIcon } from "@/icons/StrategyIcon";
 
 export const Benefits = (): JSX.Element => (
-    <div className="flex flex-col justify-center mobile:h-screen max-w-[1444px] bg-white mx-10 mobile:mx-20 mt-[90px] mobile:mt-0 self-center">
-        <p className="text-black text-center font-poppins font-medium text-3xl mobile:text-5xl">Designed for those who live and<br />breathe football passion</p>
-        <div className="flex flex-col mobile:flex-row justify-center items-center mobile:items-start mobile:justify-between">
-            <FirstItem />
-            <SecondItem />
-            <ThirdItem />
+    <div className="flex flex-col justify-center items-center mobile:h-screen  bg-white mx-10 mobile:mx-20 mt-[90px] mobile:mt-0 self-center">
+        <div className="max-w-[1444px]">
+            <p className="text-black text-center font-poppins font-medium text-3xl mobile:text-5xl">Designed for those who live and<br />breathe football passion</p>
+            <div className="flex flex-col mobile:flex-row justify-center items-center mobile:justify-between">
+                <FirstItem />
+                <SecondItem />
+                <ThirdItem />
+            </div>
         </div>
+
     </div>
 )
 
 const FirstItem = (): JSX.Element => (
-    <>
-        <div className="flex flex-col items-center mt-20 mx-5 max-w-[350px] justify-center">
+        <div className="flex flex-col items-center mt-20 mx-5 mobile:mx-0 mobile:mr-5 max-w-[350px] justify-center">
             <div className="bg-base-blue2 rounded-[7px] w-[64px] h-[64px] flex items-center justify-center">
                 <StrategyIcon width='36' height='36' />
             </div>
             <p className="mt-[32px] mb-[24px] text-black font-inter text-center text-2xl font-medium" >Professional strategies within reach</p>
             <p className="text-black text-center font-inter ">Unlock professional tactics and strategies. Elevate your game with insights from football's best minds.</p>
         </div>
-    </>
 )
 
 const SecondItem = (): JSX.Element => (
@@ -42,7 +43,7 @@ const SecondItem = (): JSX.Element => (
 
 const ThirdItem = (): JSX.Element => (
     <>
-        <div className="flex flex-col items-center mt-20 mx-5 justify-center max-w-[380px]">
+        <div className="flex flex-col items-center mt-20 mx-5 mobile:mx-0 mobile:ml-5 justify-center max-w-[380px]">
             <div className="bg-base-blue2 rounded-[7px] w-[64px] h-[64px] flex items-center justify-center">
                 <GraphicIcon width='36' height='36' />
             </div>
