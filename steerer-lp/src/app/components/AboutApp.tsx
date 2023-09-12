@@ -15,7 +15,7 @@ export const AboutApp = (): JSX.Element => (
 )
 
 const FirstRow = (): JSX.Element => (
-    <div className="bg-white px-10 mobile:px-20 flex flex-col-reverse mobile:flex-row justify-center justify-around items-center">
+    <div className="bg-white px-5 mobile:px-20 flex flex-col-reverse mobile:flex-row justify-center justify-around items-center">
         <div className="relative mt-12 mobile:mt-0 flex items-end justify-center bg-gray1/[.1] rounded-[20px] mobile:w-5/12 max-w-[578px] h-2/3 max-h-[570px]" >
             <TimeCard />
             <PlayerCard />
@@ -64,10 +64,10 @@ const GoalCard = (): JSX.Element => (
 )
 
 const SecondRow = (): JSX.Element => (
-    <div className="mobile:mt-[118px] bg-white px-20 flex flex-row justify-center justify-around items-center">
-        <div className="flex flex-col w-5/12">
-            <p className="text-black text-left font-poppins font-medium text-4xl">Find sponsors near you</p>
-            <p className="text-black/[.7] font-inter text-xl mt-6" >Looking for support for your project? Want to take your team to the next level?
+    <div className="mobile:mt-[118px] bg-white px-5 mobile:px-20 mt-16 flex flex-col mt- mobile:flex-row justify-center justify-around items-center">
+        <div className="flex flex-col mobile:w-5/12">
+            <p className="text-black text-center mobile:text-left font-poppins font-medium text-3xl mobile:text-4xl">Find sponsors near you</p>
+            <p className="text-black/[.7] text-center mobile:text-left font-inter text-base mobile:text-xl mt-6" >Looking for support for your project? Want to take your team to the next level?
                 The solution is closer than you think! With Steerer, it's easy to find sponsors
                 near you, ready to believe in your potential and support your ambitions.<br /> <br />
                 Don't waste any more time seeking support in the dark. Find sponsors near you
@@ -75,18 +75,22 @@ const SecondRow = (): JSX.Element => (
                 step in your journey to greatness!
             </p>
         </div>
-        <div className="relative flex justify-center items-end bg-gray1/[.1] rounded-[20px] w-5/12 h-2/3" >
+        <div className="relative flex justify-center items-end bg-gray1/[.1] mt-12 mobile:mt-0 rounded-[20px] mobile:w-5/12 mobile:h-2/3" >
             <CronometerCard />
-            <div className="absolute items-center justify-center bg-base-blue3 w-[67px] h-[67px] rounded-[10px] bottom-[21px] -left-[32px]">
-                <BallIcon className="stroke-white w-[40px] h-[40px] mt-[12px] ml-[14px]" />
-            </div>
-            <Image src={sponsorMockup} alt="steerer" className="mx-[50px] mobile:px-0 mt-[16px] mobile:mt-0" />
+            <BallCard />
+            <Image src={sponsorMockup} alt="steerer" className="mobile:mx-[50px] mx-[32px] mt-[16px] mobile:mt-0" />
         </div>
     </div>
 )
 
 const CronometerCard = (): JSX.Element => (
-    <div className="absolute items-center justify-center bg-base-blue2 w-[67px] h-[67px] rounded-[10px] -top-[12px] right-[63px]">
-        <CronometerIcon className="stroke-white w-[30px] h-[35px] ml-[19.5px] mt-[14px]" />
+    <div className="absolute items-center justify-center bg-base-blue2 w-[40px] h-[40px] mobile:w-[67px] mobile:h-[67px] rounded-[6px] mobile:rounded-[10px] -top-[7px] right-[36px] mobile:-top-[12px] mobile:right-[63px]">
+        <CronometerIcon className="stroke-white w-[18px] h-[22px] mobile:w-[30px] mobile:h-[35px] ml-[12px] mt-[8px] mobile:ml-[19.5px] mobile:mt-[14px]" />
+    </div>
+)
+
+const BallCard = (): JSX.Element => (
+    <div className="absolute items-center justify-center bg-base-blue3 w-[40px] h-[40px] mobile:w-[67px] mobile:h-[67px] rounded-[6px] mobile:rounded-[10px] bottom-[16px] mobile:bottom-[21px] -left-[12px] mobile:-left-[32px]">
+        <BallIcon className="stroke-white w-[30px] h-[30px] mobile:w-[40px] mobile:h-[40px] mt-[5px] ml-[5.5px] mobile:mt-[12px] mobile:ml-[14px]" />
     </div>
 )

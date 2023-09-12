@@ -34,7 +34,7 @@ export const Drawer = ({ isOpen, setIsOpen }: { isOpen: boolean, setIsOpen: Disp
 }
 
 const Header = ({ setIsOpen }: { setIsOpen: Dispatch<SetStateAction<boolean>> }): JSX.Element => (
-    <div className="flex flex-row justify-between mx-10 mobile:mx-20 py-5 static bg-white">
+    <div className="flex flex-row justify-between mx-5 mobile:mx-20 py-5 static bg-white">
         <Logo />
         <a href="#" className="flex mobile:hidden" onClick={() => setIsOpen(false)}>
             <p>here</p>
@@ -60,5 +60,5 @@ const OptionsList = (): JSX.Element => (
 )
 
 const HeaderOption = ({ text }: { text: string }): JSX.Element => (
-    <a href="#" className="font-inter font-normal text-black2 mb-6 mx-10" onClick={() => { }}>{text}</a>
+    <a href="#" className="font-inter font-normal text-black2 mb-6 mx-5" onClick={() => { }}>{text}</a>
 )
