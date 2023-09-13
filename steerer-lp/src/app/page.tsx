@@ -3,7 +3,7 @@
 import { TextRow } from "./components/TextRow"
 import { Header } from "@/components/Header"
 import { Benefits } from "./components/Benefits"
-import { TextImageColumn } from "./components/TextImageColumn"
+import { ApplicationFunctionalities } from "./components/ApplicationFunctionalities"
 import { AboutApp } from "./components/AboutApp"
 import { useState } from "react"
 import { Drawer } from "@/components/Drawer"
@@ -18,7 +18,7 @@ const Home = (): JSX.Element => {
       <Header isOpen={openDrawer} setIsOpen={setOpenDrawer} />
       {/* <TextRow /> */}
       <AboutApp />
-      {/* <TextImageColumn /> */}
+      <ApplicationFunctionalities />
       <WaitingList />
       <Benefits />
       <Footer />
