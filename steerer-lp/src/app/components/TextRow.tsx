@@ -4,8 +4,8 @@ import { HeartRateIcon } from "@/icons/HeartRateIcon"
 
 export const TextRow = () => (
     <>
-        <div className="mx-20">
-            <div className="flex justify-between ">
+        <div className="mobile:mx-20 mx-5">
+            <div className="flex flex-col mobile:flex-row items-center mobile:justify-between ">
                 <FirstText />
                 <SecondText />
                 <ThirdText />
@@ -16,8 +16,8 @@ export const TextRow = () => (
 )
 
 const FirstText = (): JSX.Element => (
-    <p className="text-black font-poppins font-semibold text-xl">
-        Access to tactics and strategies<br />employed by professional teams.
+    <p className="text-black text-center mobile:max-w-[340px] mb-[10px] mobile:mb-0 mobile:text-left font-poppins font-semibold text-lg mobile:text-xl">
+        Access to tactics and strategie employed by professional teams.
     </p>
 )
 

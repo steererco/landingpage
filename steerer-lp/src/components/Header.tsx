@@ -16,13 +16,13 @@ export const Header = ({ isOpen, setIsOpen }: { isOpen: boolean, setIsOpen: Disp
     }, [])
 
     return (
-        <div className="flex flex-row justify-between mx-5 mobile:mx-20 py-5 static bg-white">
+        <header className="flex flex-row justify-between mx-5 mobile:mx-20 py-5 static bg-white">
             <Logo />
             <OptionsList />
             <a href="#" className="flex mobile:hidden" onClick={() => setIsOpen(!isOpen)}>
                 <MenuIcon />
             </a>
-        </div>
+        </header>
     )
 }
 

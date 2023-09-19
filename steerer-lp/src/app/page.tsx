@@ -9,14 +9,14 @@ import { useState } from "react"
 import { Drawer } from "@/components/Drawer"
 import { Footer } from "@/components/Footer"
 import { WaitingList } from "./components/WaitingList"
+import { Hero } from "./components/Hero"
 
 const Home = (): JSX.Element => {
   const [openDrawer, setOpenDrawer] = useState(false)
 
   return (
     <main className="bg-white h-screen">
-      <Header isOpen={openDrawer} setIsOpen={setOpenDrawer} />
-      {/* <TextRow /> */}
+      <Hero openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
       <AboutApp />
       <ApplicationFunctionalities />
       <WaitingList />
