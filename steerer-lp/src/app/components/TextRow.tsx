@@ -3,16 +3,14 @@ import { GlobeIcon } from "@/icons/GlobeIcon"
 import { HeartRateIcon } from "@/icons/HeartRateIcon"
 
 export const TextRow = () => (
-    <>
-        <div className="mobile:mx-20 mx-5">
-            <div className="flex flex-col mobile:flex-row items-center mobile:justify-between ">
-                <FirstText />
-                <SecondText />
-                <ThirdText />
-            </div>
-            <Divider />
+    <div className="mobile:mx-20 mt-[48px] mobile:mt-[62px] mx-5">
+        <div className="flex flex-col mobile:flex-row items-center mobile:justify-between ">
+            <FirstText />
+            <SecondText />
+            <ThirdText />
         </div>
-    </>
+        <Divider />
+    </div>
 )
 
 const FirstText = (): JSX.Element => (

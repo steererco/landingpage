@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { TextRow } from "./TextRow";
 import { Dispatch, SetStateAction } from "react";
+import { WaitingListButton } from "@/components/WaitingListButton";
 
 export const Hero = ({ openDrawer, setOpenDrawer }: { openDrawer: boolean, setOpenDrawer: Dispatch<SetStateAction<boolean>> }): JSX.Element => (
     <div className="">
@@ -30,7 +31,10 @@ const TextWithUnderline = (): JSX.Element => (
 )
 
 const Subtitle = (): JSX.Element => (
-    <div className="flex w-full justify-center">
+    <div className="flex flex-col w-full items-center">
         <p className="max-w-[644px] text-sm mobile:text-xl font-inter text-black4 text-center mx-5">The app that goes beyond the four lines, you are just one download away from becoming a legend. </p>
+        <div className="w-[262px] mt-[32px] mobile:mt-[48px] ml-7">
+            <WaitingListButton />
+        </div>
     </div>
 )
