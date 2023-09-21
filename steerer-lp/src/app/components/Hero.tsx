@@ -2,13 +2,20 @@ import { Header } from "@/components/Header";
 import { TextRow } from "./TextRow";
 import { Dispatch, SetStateAction } from "react";
 import { WaitingListButton } from "@/components/WaitingListButton";
+import mockup from "@/../../public/hero_mockup.png";
+import Image from "next/image";
 
 export const Hero = ({ openDrawer, setOpenDrawer }: { openDrawer: boolean, setOpenDrawer: Dispatch<SetStateAction<boolean>> }): JSX.Element => (
-    <div className="">
+    <div className="h-screen flex flex-col">
         <Header isOpen={openDrawer} setIsOpen={setOpenDrawer} />
-        <TextWithUnderline />
-        <Subtitle />
-        <TextRow />
+        <div className="flex flex-col flex-1 justify-end">
+            <TextWithUnderline />
+            <div className="flex flex-col flex-1">
+                <p className="text-black">Here</p>
+            </div>
+            <Subtitle />
+            <TextRow />
+        </div>
     </div>
 )
 

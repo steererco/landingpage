@@ -32,5 +32,5 @@ const ThirdText = (): JSX.Element => (
 )
 
 const Divider = (): JSX.Element => (
-    <hr className="my-12 h-0.5 border-t-0 bg-gray2/[.1]" />
+    <hr className="mt-12 mb-4 h-0.5 border-t-0 bg-gray2/[.1]" />
 )
