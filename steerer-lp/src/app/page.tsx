@@ -1,7 +1,5 @@
 'use client'
 
-import { TextRow } from "./components/TextRow"
-import { Header } from "@/components/Header"
 import { Benefits } from "./components/Benefits"
 import { ApplicationFunctionalities } from "./components/ApplicationFunctionalities"
 import { AboutApp } from "./components/AboutApp"
@@ -10,6 +8,8 @@ import { Drawer } from "@/components/Drawer"
 import { Footer } from "@/components/Footer"
 import { WaitingList } from "./components/WaitingList"
 import { Hero } from "./components/Hero"
+import { ImageSection } from "./components/ImageSection"
+
 
 const Home = (): JSX.Element => {
   const [openDrawer, setOpenDrawer] = useState(false)
@@ -21,6 +21,7 @@ const Home = (): JSX.Element => {
       <ApplicationFunctionalities />
       <WaitingList />
       <Benefits />
+      <ImageSection />
       <Footer />
       <Drawer isOpen={openDrawer} setIsOpen={setOpenDrawer} />
     </main >
