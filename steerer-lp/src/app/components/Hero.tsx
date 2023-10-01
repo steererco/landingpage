@@ -7,9 +7,9 @@ import Image from "next/image";
 
 export const Hero = ({ openDrawer, setOpenDrawer }: { openDrawer: boolean, setOpenDrawer: Dispatch<SetStateAction<boolean>> }): JSX.Element => (
     <div>
-        <div className="h-screen max-h-screen flex flex-col justify-between">
+        <div className="h-screen flex flex-col justify-between">
             <Header isOpen={openDrawer} setIsOpen={setOpenDrawer} />
-            <div className="flex flex-col h-[85%]">
+            <div className="flex flex-col mobile:h-[85%]">
                 <TextWithUnderline />
                 <Subtitle />
                 <ImageComponent />
@@ -47,7 +47,7 @@ const Subtitle = (): JSX.Element => (
 )
 
 const ImageComponent = (): JSX.Element => (
-    <div className="flex grow justify-center items-end mb-6 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-base-blue3/[.15] via-base-blue3/[.01] to-white ">
+    <div className="flex grow justify-center items-end mb-6 bg-gradient-to-t mobile:bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-base-blue3/[.15] via-base-blue3/[.1] mobile:via-base-blue3/[.01] to-white ">
         <div>
             <Image src={mockup} alt="steerer" />
         </div>
