@@ -7,7 +7,7 @@ import { DefaultButton } from "./DefaultButton";
 import { ArrowIcon } from "@/icons/ArrowIcon";
 import { handleScroll } from "@/utils/scroll";
 
-export const Header = ({ aboutAppRef, functionalitiesRef, isOpen, setIsOpen }: { aboutAppRef: MutableRefObject<null>, functionalitiesRef: MutableRefObject<null>, isOpen: boolean, setIsOpen: Dispatch<SetStateAction<boolean>> }): JSX.Element => {
+export const Header = ({ aboutAppRef, functionalitiesRef, waitingListRef, isOpen, setIsOpen }: { aboutAppRef: MutableRefObject<null>, functionalitiesRef: MutableRefObject<null>, waitingListRef: MutableRefObject<null>, isOpen: boolean, setIsOpen: Dispatch<SetStateAction<boolean>> }): JSX.Element => {
     // const handleWindowResize = () => window.innerWidth >= 900 && setIsOpen(false)
 
     // useEffect(() => {
@@ -19,7 +19,7 @@ export const Header = ({ aboutAppRef, functionalitiesRef, isOpen, setIsOpen }: {
     return (
         <header className="flex flex-row justify-center mobile:justify-between mx-5 mobile:mx-20 pt-5 static bg-white">
             <Logo />
-            <OptionsList aboutAppRef={aboutAppRef} functionalitiesRef={functionalitiesRef} />
+            <OptionsList aboutAppRef={aboutAppRef} functionalitiesRef={functionalitiesRef} waitingListRef={waitingListRef} />
         </header>
     )
 }
@@ -28,12 +28,12 @@ const HeaderOption = ({ scrollRef, text }: { scrollRef: MutableRefObject<null>, 
     <a href="javascript:void(0);" onClick={() => handleScroll(scrollRef)} className="font-inter font-normal text-black2 mx-10">{text}</a>
 )
 
-const OptionsList = ({ aboutAppRef, functionalitiesRef }: { aboutAppRef: MutableRefObject<null>, functionalitiesRef: MutableRefObject<null> }): JSX.Element => (
+const OptionsList = ({ aboutAppRef, functionalitiesRef, waitingListRef }: { aboutAppRef: MutableRefObject<null>, functionalitiesRef: MutableRefObject<null>, waitingListRef: MutableRefObject<null> }): JSX.Element => (
     <div className="hidden mobile:block">
         <div className="flex flex-row w-514 justify-around">
             <HeaderOption scrollRef={aboutAppRef} text="About" />
             <HeaderOption scrollRef={functionalitiesRef} text="Functionalities" />
-            <HeaderOption scrollRef={aboutAppRef} text="Waiting list" />
+            <HeaderOption scrollRef={waitingListRef} text="Waiting list" />
         </div>
     </div>
 )

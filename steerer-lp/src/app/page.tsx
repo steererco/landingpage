@@ -24,6 +24,7 @@ const Home = (): JSX.Element => {
         functionalitiesRef={applicationFunctionalitiesRef}
         openDrawer={openDrawer}
         setOpenDrawer={setOpenDrawer}
+        waitingListRef={waitingListRef}
       />
       <AboutApp myRef={aboutAppRef} />
       <ApplicationFunctionalities myRef={applicationFunctionalitiesRef} />
