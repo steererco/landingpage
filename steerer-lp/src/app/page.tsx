@@ -20,7 +20,7 @@ const Home = (): JSX.Element => {
 
   return (
     <main className="bg-white h-screen snap-y snap-mandatory overflow-scroll animate-fade">
-      <Hero aboutAppRef={aboutAppRef} openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
+      <Hero aboutAppRef={aboutAppRef} functionalitiesRef={applicationFunctionalitiesRef} openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
       <AboutApp myRef={aboutAppRef} />
       <ApplicationFunctionalities myRef={applicationFunctionalitiesRef} />
       <WaitingList />

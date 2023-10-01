@@ -5,10 +5,10 @@ import { WaitingListButton } from "@/components/WaitingListButton";
 import mockup from "@/../../public/hero_mockup.png";
 import Image from "next/image";
 
-export const Hero = ({ aboutAppRef, openDrawer, setOpenDrawer }: { aboutAppRef: MutableRefObject<null>, openDrawer: boolean, setOpenDrawer: Dispatch<SetStateAction<boolean>> }): JSX.Element => (
+export const Hero = ({ aboutAppRef, functionalitiesRef, openDrawer, setOpenDrawer }: { aboutAppRef: MutableRefObject<null>, functionalitiesRef: MutableRefObject<null>, openDrawer: boolean, setOpenDrawer: Dispatch<SetStateAction<boolean>> }): JSX.Element => (
     <div className="snap-start pb-[160px]">
         <div className="h-screen flex flex-col justify-between">
-            <Header aboutAppRef={aboutAppRef} isOpen={openDrawer} setIsOpen={setOpenDrawer} />
+            <Header aboutAppRef={aboutAppRef} functionalitiesRef={functionalitiesRef} isOpen={openDrawer} setIsOpen={setOpenDrawer} />
             <div className="flex flex-col mobile:h-[85%]">
                 <TextWithUnderline />
                 <Subtitle />
