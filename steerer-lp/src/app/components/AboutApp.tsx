@@ -8,7 +8,7 @@ import { CronometerIcon } from "@/icons/CronometerIcon";
 import { BallIcon } from "@/icons/BallIcon";
 
 export const AboutApp = (): JSX.Element => (
-    <div className="mt-20 mb-20">
+    <div className="snap-start pt-[100px] pb-[300px]">
         <FirstRow />
         <SecondRow />
     </div>

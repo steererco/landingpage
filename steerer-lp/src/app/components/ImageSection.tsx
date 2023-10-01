@@ -8,7 +8,7 @@ import { WhiteLogo } from "@/logo/WhiteLogo"
 import { WaitingListButton } from "@/components/WaitingListButton"
 
 export const ImageSection = (): JSX.Element => (
-    <div className="flex flex-row gap-[20px] mobile:gap-[30px] overflow-y-scroll no-scrollbar mobile:overflow-auto h-screen items-center mobile:px-20 px-5">
+    <div className="snap-start flex flex-row gap-[20px] mobile:gap-[30px] overflow-y-scroll no-scrollbar mobile:overflow-auto h-screen items-center mobile:px-20 px-5">
         <div className="flex flex-1 h-[70%] gap-[30px]">
             <div className="flex flex-col h-full w-screen mobile:w-full gap-[30px]">
                 <FirstRow />

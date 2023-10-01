@@ -6,7 +6,7 @@ import { BlackLogo } from "@/logo/BlackLogo"
 import { ReactNode } from "react"
 
 export const Footer = (): JSX.Element => (
-    <div className="flex flex-col-reverse mobile:flex-row justify-center mobile:justify-between max-w-[1444px] pb-16 mx-5 mobile:mx-20 mobile:h-[60vh] mt-[80px] mobile:mt-0">
+    <div className="snap-start flex flex-col-reverse mobile:flex-row justify-center mobile:justify-between max-w-[1444px] pb-16 mx-5 mobile:mx-20 mobile:h-[60vh] mt-[80px] mobile:mt-0">
         <LastCol />
         <div className="flex flex-col items-center mobile:items-start justify-between h-full text-black">
             <AboutApp />

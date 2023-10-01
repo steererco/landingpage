@@ -15,7 +15,7 @@ const Home = (): JSX.Element => {
   const [openDrawer, setOpenDrawer] = useState(false)
 
   return (
-    <main className="bg-white h-screen">
+    <main className="bg-white h-screen snap-y snap-mandatory overflow-scroll animate-fade">
       <Hero openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
       <AboutApp />
       <ApplicationFunctionalities />
