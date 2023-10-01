@@ -8,8 +8,8 @@ import { CronometerIcon } from "@/icons/CronometerIcon";
 import { BallIcon } from "@/icons/BallIcon";
 import { MutableRefObject } from "react";
 
-export const AboutApp = ({ refs }: { refs: MutableRefObject<null> }): JSX.Element => (
-    <div ref={refs} className="snap-start pt-[100px] pb-[300px]">
+export const AboutApp = ({ myRef }: { myRef: MutableRefObject<null> }): JSX.Element => (
+    <div ref={myRef} className="snap-start pt-[100px] pb-[300px]">
         <FirstRow />
         <SecondRow />
     </div>

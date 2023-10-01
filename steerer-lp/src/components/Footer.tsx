@@ -90,13 +90,13 @@ const SocialOption = ({ children }: { children: ReactNode }): JSX.Element => (
 
 const Links = ({ aboutAppRef }: { aboutAppRef: MutableRefObject<null> }): JSX.Element => (
     <div className="flex flex-col items-center mobile:items-start">
-        <LinkOption refs={aboutAppRef}>About Us</LinkOption>
-        <LinkOption refs={aboutAppRef}>Functionalities</LinkOption>
-        <LinkOption refs={aboutAppRef}>Waiting list</LinkOption>
+        <LinkOption scrollRef={aboutAppRef}>About Us</LinkOption>
+        <LinkOption scrollRef={aboutAppRef}>Functionalities</LinkOption>
+        <LinkOption scrollRef={aboutAppRef}>Waiting list</LinkOption>
         {/* <LinkOption>Contact</LinkOption> */}
     </div>
 )
 
-const LinkOption = ({ children, refs }: { children: ReactNode, refs: MutableRefObject<null> }): JSX.Element => (
-    <a href='javascript:void(0);' onClick={() => handleScroll(refs)} className="font-inter mobile:text-xl text-black/[.7] mb-4">{children}</a>
+const LinkOption = ({ children, scrollRef }: { children: ReactNode, scrollRef: MutableRefObject<null> }): JSX.Element => (
+    <a href='javascript:void(0);' onClick={() => handleScroll(scrollRef)} className="font-inter mobile:text-xl text-black/[.7] mb-4">{children}</a>
 )

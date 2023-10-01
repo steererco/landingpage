@@ -2,37 +2,38 @@
 
 import { BlueLogo } from "@/logo/BlueLogo"
 import { MenuIcon } from "@/icons/MenuIcon"
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { Dispatch, MutableRefObject, SetStateAction, useEffect, useState } from "react";
 import { DefaultButton } from "./DefaultButton";
 import { ArrowIcon } from "@/icons/ArrowIcon";
+import { handleScroll } from "@/utils/scroll";
 
-export const Header = ({ isOpen, setIsOpen }: { isOpen: boolean, setIsOpen: Dispatch<SetStateAction<boolean>> }): JSX.Element => {
-    const handleWindowResize = () => window.innerWidth >= 900 && setIsOpen(false)
+export const Header = ({ aboutAppRef, isOpen, setIsOpen }: { aboutAppRef: MutableRefObject<null>, isOpen: boolean, setIsOpen: Dispatch<SetStateAction<boolean>> }): JSX.Element => {
+    // const handleWindowResize = () => window.innerWidth >= 900 && setIsOpen(false)
 
-    useEffect(() => {
-        window.addEventListener('resize', handleWindowResize);
+    // useEffect(() => {
+    //     window.addEventListener('resize', handleWindowResize);
 
-        return () => window.removeEventListener('resize', handleWindowResize)
-    }, [])
+    //     return () => window.removeEventListener('resize', handleWindowResize)
+    // }, [])
 
     return (
         <header className="flex flex-row justify-center mobile:justify-between mx-5 mobile:mx-20 pt-5 static bg-white">
             <Logo />
-            <OptionsList />
+            <OptionsList aboutAppRef={aboutAppRef} />
         </header>
     )
 }
 
-const HeaderOption = ({ text }: { text: string }): JSX.Element => (
-    <a href="#" className="font-inter font-normal text-black2 mx-10" onClick={() => { }}>{text}</a>
+const HeaderOption = ({ scrollRef, text }: { scrollRef: MutableRefObject<null>, text: string }): JSX.Element => (
+    <a href="javascript:void(0);" onClick={() => handleScroll(scrollRef)} className="font-inter font-normal text-black2 mx-10">{text}</a>
 )
 
-const OptionsList = (): JSX.Element => (
+const OptionsList = ({ aboutAppRef }: { aboutAppRef: MutableRefObject<null> }): JSX.Element => (
     <div className="hidden mobile:block">
         <div className="flex flex-row w-514 justify-around">
-            <HeaderOption text="About" />
-            <HeaderOption text="Functionalities" />
-            <HeaderOption text="Waiting list" />
+            <HeaderOption scrollRef={aboutAppRef} text="About" />
+            <HeaderOption scrollRef={aboutAppRef} text="Functionalities" />
+            <HeaderOption scrollRef={aboutAppRef} text="Waiting list" />
         </div>
     </div>
 )
