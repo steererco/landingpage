@@ -47,9 +47,10 @@ const Subtitle = (): JSX.Element => (
 )
 
 const ImageComponent = (): JSX.Element => (
-    <div className="flex grow justify-center items-end mb-6">
+    <div className="flex grow justify-center items-end mb-6 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-base-blue3/[.15] via-base-blue3/[.01] to-white ">
         <div>
             <Image src={mockup} alt="steerer" />
         </div>
     </div>
 )
+
