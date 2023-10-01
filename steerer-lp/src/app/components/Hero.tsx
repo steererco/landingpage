@@ -6,16 +6,16 @@ import mockup from "@/../../public/hero_mockup.png";
 import Image from "next/image";
 
 export const Hero = ({ openDrawer, setOpenDrawer }: { openDrawer: boolean, setOpenDrawer: Dispatch<SetStateAction<boolean>> }): JSX.Element => (
-    <div className="h-screen flex flex-col">
-        <Header isOpen={openDrawer} setIsOpen={setOpenDrawer} />
-        <div className="flex flex-col flex-1 justify-end">
-            <TextWithUnderline />
-            <div className="flex flex-col flex-1">
-                <p className="text-black">Here</p>
+    <div>
+        <div className="h-screen max-h-screen flex flex-col justify-between">
+            <Header isOpen={openDrawer} setIsOpen={setOpenDrawer} />
+            <div className="flex flex-col h-[85%]">
+                <TextWithUnderline />
+                <Subtitle />
+                <ImageComponent />
             </div>
-            <Subtitle />
-            <TextRow />
         </div>
+        <TextRow />
     </div>
 )
 
@@ -42,6 +42,14 @@ const Subtitle = (): JSX.Element => (
         <p className="max-w-[644px] text-sm mobile:text-xl font-inter text-black4 text-center mx-5">The app that goes beyond the four lines, you are just one download away from becoming a legend. </p>
         <div className="w-[262px] mt-[32px] mobile:mt-[48px] ml-7">
             <WaitingListButton />
+        </div>
+    </div>
+)
+
+const ImageComponent = (): JSX.Element => (
+    <div className="flex grow justify-center items-end mb-6">
+        <div>
+            <Image src={mockup} alt="steerer" />
         </div>
     </div>
 )
