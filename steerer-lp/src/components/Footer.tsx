@@ -6,9 +6,9 @@ import { BlackLogo } from "@/logo/BlackLogo"
 import { handleScroll } from "@/utils/scroll"
 import { MutableRefObject, ReactNode } from "react"
 
-export const Footer = ({ aboutAppRef, functionalitiesRef }: { aboutAppRef: MutableRefObject<null>, functionalitiesRef: MutableRefObject<null> }): JSX.Element => (
+export const Footer = ({ aboutAppRef, functionalitiesRef, waitingListRef }: { aboutAppRef: MutableRefObject<null>, functionalitiesRef: MutableRefObject<null>, waitingListRef: MutableRefObject<null> }): JSX.Element => (
     <div className="snap-start flex flex-col-reverse mobile:flex-row justify-center mobile:justify-between max-w-[1444px] pb-16 mx-5 mobile:mx-20 mobile:h-[60vh] mt-[80px] mobile:mt-0">
-        <LastCol aboutAppRef={aboutAppRef} functionalitiesRef={functionalitiesRef}/>
+        <LastCol aboutAppRef={aboutAppRef} functionalitiesRef={functionalitiesRef} waitingListRef={waitingListRef} />
         <div className="flex flex-col items-center mobile:items-start justify-between h-full text-black">
             <AboutApp />
             <Newsletter />
@@ -46,9 +46,9 @@ const Logo = (): JSX.Element => (
     </>
 )
 
-const LastCol = ({ aboutAppRef, functionalitiesRef }: { aboutAppRef: MutableRefObject<null>, functionalitiesRef: MutableRefObject<null> }): JSX.Element => (
+const LastCol = ({ aboutAppRef, functionalitiesRef, waitingListRef }: { aboutAppRef: MutableRefObject<null>, functionalitiesRef: MutableRefObject<null>, waitingListRef: MutableRefObject<null> }): JSX.Element => (
     <div className="flex flex-col items-center mobile:items-start justify-between h-full mt-[60px] mobile:mt-0">
-        <Options aboutAppRef={aboutAppRef} functionalitiesRef={functionalitiesRef} />
+        <Options aboutAppRef={aboutAppRef} functionalitiesRef={functionalitiesRef} waitingListRef={waitingListRef} />
         <PrivacyAndTrademark />
     </div>
 )
@@ -60,9 +60,9 @@ const PrivacyAndTrademark = (): JSX.Element => (
     </div>
 )
 
-const Options = ({ aboutAppRef, functionalitiesRef }: { aboutAppRef: MutableRefObject<null>, functionalitiesRef: MutableRefObject<null> }): JSX.Element => (
+const Options = ({ aboutAppRef, functionalitiesRef, waitingListRef }: { aboutAppRef: MutableRefObject<null>, functionalitiesRef: MutableRefObject<null>, waitingListRef: MutableRefObject<null> }): JSX.Element => (
     <div className="flex flex-col items-center mobile:items-start w-full">
-        <Links aboutAppRef={aboutAppRef} functionalitiesRef={functionalitiesRef} />
+        <Links aboutAppRef={aboutAppRef} functionalitiesRef={functionalitiesRef} waitingListRef={waitingListRef} />
         <Socials />
     </div>
 )
@@ -88,11 +88,11 @@ const SocialOption = ({ children }: { children: ReactNode }): JSX.Element => (
     <a href='#' className="mobile:mr-12">{children}</a>
 )
 
-const Links = ({ aboutAppRef, functionalitiesRef }: { aboutAppRef: MutableRefObject<null>, functionalitiesRef: MutableRefObject<null> }): JSX.Element => (
+const Links = ({ aboutAppRef, functionalitiesRef, waitingListRef }: { aboutAppRef: MutableRefObject<null>, functionalitiesRef: MutableRefObject<null>, waitingListRef: MutableRefObject<null> }): JSX.Element => (
     <div className="flex flex-col items-center mobile:items-start">
         <LinkOption scrollRef={aboutAppRef}>About Us</LinkOption>
         <LinkOption scrollRef={functionalitiesRef}>Functionalities</LinkOption>
-        <LinkOption scrollRef={aboutAppRef}>Waiting list</LinkOption>
+        <LinkOption scrollRef={waitingListRef}>Waiting list</LinkOption>
         {/* <LinkOption>Contact</LinkOption> */}
     </div>
 )

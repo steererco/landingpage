@@ -2,10 +2,11 @@ import { WaitingListButton } from "@/components/WaitingListButton";
 import Image from "next/image";
 import mockupMobile from "@/../../public/waitinglist_mockup_mobile.png"
 import mockupDesktop from "@/../../public/waitinglist_mockup_desktop.png"
+import { MutableRefObject } from "react";
 
 
-export const WaitingList = (): JSX.Element => (
-    <div className="snap-center mobile:h-screen px-5 mobile:px-20 mt-[93px] mobile:mt-0 flex items-center">
+export const WaitingList = ({ myRef }: { myRef: MutableRefObject<null> }): JSX.Element => (
+    <div ref={myRef} className="snap-center mobile:h-screen px-5 mobile:px-20 mt-[93px] mobile:mt-0 flex items-center">
         <div className="flex mobile:items-end mobile:h-[70vh] w-full relative">
             <Backdrop />
             <div className="flex flex-col-reverse mobile:flex-row justify-end items-center mobile:items-end mobile:justify-between w-full">
