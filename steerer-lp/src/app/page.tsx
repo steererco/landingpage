@@ -23,7 +23,7 @@ const Home = (): JSX.Element => {
       <Benefits />
       <ImageSection />
       <Footer />
-      <Drawer isOpen={openDrawer} setIsOpen={setOpenDrawer} />
+      {/* <Drawer isOpen={openDrawer} setIsOpen={setOpenDrawer} /> */}
     </main >
   )
 }

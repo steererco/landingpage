@@ -16,12 +16,9 @@ export const Header = ({ isOpen, setIsOpen }: { isOpen: boolean, setIsOpen: Disp
     }, [])
 
     return (
-        <header className="flex flex-row justify-between mx-5 mobile:mx-20 pt-5 static bg-white">
+        <header className="flex flex-row justify-center mobile:justify-between mx-5 mobile:mx-20 pt-5 static bg-white">
             <Logo />
             <OptionsList />
-            <a href="#" className="flex mobile:hidden" onClick={() => setIsOpen(!isOpen)}>
-                <MenuIcon />
-            </a>
         </header>
     )
 }
