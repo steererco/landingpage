@@ -3,11 +3,12 @@ import { InstagramIcon } from "@/icons/InstagramIcon"
 import { LinkedinIcon } from "@/icons/LinkedinIcon"
 import { TwitterIcon } from "@/icons/TwitterIcon"
 import { BlackLogo } from "@/logo/BlackLogo"
-import { ReactNode } from "react"
+import { handleScroll } from "@/utils/scroll"
+import { MutableRefObject, ReactNode } from "react"
 
-export const Footer = (): JSX.Element => (
+export const Footer = ({ aboutAppRef }: { aboutAppRef: MutableRefObject<null> }): JSX.Element => (
     <div className="snap-start flex flex-col-reverse mobile:flex-row justify-center mobile:justify-between max-w-[1444px] pb-16 mx-5 mobile:mx-20 mobile:h-[60vh] mt-[80px] mobile:mt-0">
-        <LastCol />
+        <LastCol aboutAppRef={aboutAppRef} />
         <div className="flex flex-col items-center mobile:items-start justify-between h-full text-black">
             <AboutApp />
             <Newsletter />
@@ -45,9 +46,9 @@ const Logo = (): JSX.Element => (
     </>
 )
 
-const LastCol = (): JSX.Element => (
+const LastCol = ({ aboutAppRef }: { aboutAppRef: MutableRefObject<null> }): JSX.Element => (
     <div className="flex flex-col items-center mobile:items-start justify-between h-full mt-[60px] mobile:mt-0">
-        <Options />
+        <Options aboutAppRef={aboutAppRef} />
         <PrivacyAndTrademark />
     </div>
 )
@@ -59,9 +60,9 @@ const PrivacyAndTrademark = (): JSX.Element => (
     </div>
 )
 
-const Options = (): JSX.Element => (
+const Options = ({ aboutAppRef }: { aboutAppRef: MutableRefObject<null> }): JSX.Element => (
     <div className="flex flex-col items-center mobile:items-start w-full">
-        <Links />
+        <Links aboutAppRef={aboutAppRef} />
         <Socials />
     </div>
 )
@@ -87,15 +88,15 @@ const SocialOption = ({ children }: { children: ReactNode }): JSX.Element => (
     <a href='#' className="mobile:mr-12">{children}</a>
 )
 
-const Links = (): JSX.Element => (
+const Links = ({ aboutAppRef }: { aboutAppRef: MutableRefObject<null> }): JSX.Element => (
     <div className="flex flex-col items-center mobile:items-start">
-        <LinkOption>About Us</LinkOption>
-        <LinkOption>Functionalities</LinkOption>
-        <LinkOption>Waiting list</LinkOption>
+        <LinkOption refs={aboutAppRef}>About Us</LinkOption>
+        <LinkOption refs={aboutAppRef}>Functionalities</LinkOption>
+        <LinkOption refs={aboutAppRef}>Waiting list</LinkOption>
         {/* <LinkOption>Contact</LinkOption> */}
     </div>
 )
 
-const LinkOption = ({ children }: { children: ReactNode }): JSX.Element => (
-    <a href='#' className="font-inter mobile:text-xl text-black/[.7] mb-4">{children}</a>
+const LinkOption = ({ children, refs }: { children: ReactNode, refs: MutableRefObject<null> }): JSX.Element => (
+    <a href='javascript:void(0);' onClick={() => handleScroll(refs)} className="font-inter mobile:text-xl text-black/[.7] mb-4">{children}</a>
 )

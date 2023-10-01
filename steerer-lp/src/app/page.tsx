@@ -3,7 +3,7 @@
 import { Benefits } from "./components/Benefits"
 import { ApplicationFunctionalities } from "./components/ApplicationFunctionalities"
 import { AboutApp } from "./components/AboutApp"
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Drawer } from "@/components/Drawer"
 import { Footer } from "@/components/Footer"
 import { WaitingList } from "./components/WaitingList"
@@ -14,15 +14,19 @@ import { ImageSection } from "./components/ImageSection"
 const Home = (): JSX.Element => {
   const [openDrawer, setOpenDrawer] = useState(false)
 
+  const aboutAppRef = useRef(null);
+  // const applicationFunctionalitiesRef = useRef(null);
+  // const waitingListRef = useRef(null);
+
   return (
     <main className="bg-white h-screen snap-y snap-mandatory overflow-scroll animate-fade">
       <Hero openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
-      <AboutApp />
+      <AboutApp refs={aboutAppRef} />
       <ApplicationFunctionalities />
       <WaitingList />
       <Benefits />
       <ImageSection />
-      <Footer />
+      <Footer aboutAppRef={aboutAppRef} />
       {/* <Drawer isOpen={openDrawer} setIsOpen={setOpenDrawer} /> */}
     </main >
   )
