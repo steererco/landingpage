@@ -18,7 +18,7 @@ const FirstRow = (): JSX.Element => (
     <div className="bg-white px-5 mobile:px-20 flex flex-col-reverse mobile:flex-row justify-center justify-around items-center">
         <div className="relative mt-12 mobile:mt-0 flex items-end justify-center bg-gray1/[.1] rounded-[20px] mobile:w-5/12 max-w-[578px] h-2/3 max-h-[570px]" >
             <TimeCard />
-            <PlayerCard />
+            {/* <PlayerCard /> */}
             <GoalCard />
             <CardsCard />
             <Image src={gameMockup} alt="steerer" className="mx-[50px] mobile:px-0 mt-[16px] mobile:mt-0" />
