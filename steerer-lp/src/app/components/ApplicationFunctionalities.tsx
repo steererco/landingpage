@@ -1,12 +1,12 @@
-import { ReactNode } from "react"
+import { MutableRefObject, ReactNode } from "react"
 import Image from "next/image";
 import mockup from '@/../../public/functionalities_mockup.png'
 import playerImage from '@/../../public/player_image2.png'
 import { WhistleIcon } from "@/icons/WhistleIcon";
 import { LiveIcon } from "@/icons/LiveIcon";
 
-export const ApplicationFunctionalities = (): JSX.Element => (
-    <div className="snap-start bg-white mobile:h-screen flex flex-col items-center justify-center mt-[111px] mobile:mt-0 px-5 mobile:px-20">
+export const ApplicationFunctionalities = ({ myRef }: { myRef: MutableRefObject<null> }): JSX.Element => (
+    <div ref={myRef} className="snap-start bg-white mobile:h-screen flex flex-col items-center justify-center mt-[111px] mobile:mt-0 px-5 mobile:px-20">
         <TextArea />
         <div className="flex flex-col mobile:flex-row justify-center w-full mobile:mt-32 mt-[44px] mobile:h-2/4">
             <ImageBlock />

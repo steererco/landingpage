@@ -15,18 +15,18 @@ const Home = (): JSX.Element => {
   const [openDrawer, setOpenDrawer] = useState(false)
 
   const aboutAppRef = useRef(null);
-  // const applicationFunctionalitiesRef = useRef(null);
+  const applicationFunctionalitiesRef = useRef(null);
   // const waitingListRef = useRef(null);
 
   return (
     <main className="bg-white h-screen snap-y snap-mandatory overflow-scroll animate-fade">
       <Hero aboutAppRef={aboutAppRef} openDrawer={openDrawer} setOpenDrawer={setOpenDrawer} />
       <AboutApp myRef={aboutAppRef} />
-      <ApplicationFunctionalities />
+      <ApplicationFunctionalities myRef={applicationFunctionalitiesRef} />
       <WaitingList />
       <Benefits />
       <ImageSection />
-      <Footer aboutAppRef={aboutAppRef} />
+      <Footer aboutAppRef={aboutAppRef} functionalitiesRef={applicationFunctionalitiesRef} />
       {/* <Drawer isOpen={openDrawer} setIsOpen={setOpenDrawer} /> */}
     </main >
   )
