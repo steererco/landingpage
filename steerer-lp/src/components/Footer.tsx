@@ -90,9 +90,9 @@ const SocialOption = ({ children }: { children: ReactNode }): JSX.Element => (
 const Links = (): JSX.Element => (
     <div className="flex flex-col items-center mobile:items-start">
         <LinkOption>About Us</LinkOption>
-        <LinkOption>FAQ</LinkOption>
-        <LinkOption>Publicity</LinkOption>
-        <LinkOption>Contact</LinkOption>
+        <LinkOption>Functionalities</LinkOption>
+        <LinkOption>Waiting list</LinkOption>
+        {/* <LinkOption>Contact</LinkOption> */}
     </div>
 )
 
