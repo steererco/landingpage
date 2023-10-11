@@ -7,13 +7,18 @@ import { CardsIcon } from "@/icons/CardsIcon";
 import { CronometerIcon } from "@/icons/CronometerIcon";
 import { BallIcon } from "@/icons/BallIcon";
 import { MutableRefObject } from "react";
+import { useIsVisible } from "@/utils/useIsVisible";
 
-export const AboutApp = ({ myRef }: { myRef: MutableRefObject<null> }): JSX.Element => (
-    <div ref={myRef} className="snap-start pt-[100px] pb-[300px]">
-        <FirstRow />
-        <SecondRow />
-    </div>
-)
+export const AboutApp = ({ myRef }: { myRef: MutableRefObject<null> }): JSX.Element => {
+    const isVisible = useIsVisible(myRef)
+
+    return (
+        <div ref={myRef} className={`snap-start pt-[100px] pb-[300px] transition-opacity ease-in duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            <FirstRow />
+            <SecondRow />
+        </div>
+    )
+}
 
 const FirstRow = (): JSX.Element => (
     <div className="bg-white px-5 mobile:px-20 flex flex-col-reverse mobile:flex-row justify-center justify-around items-center">
