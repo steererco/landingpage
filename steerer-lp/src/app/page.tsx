@@ -18,7 +18,7 @@ const Home = (): JSX.Element => {
   const waitingListRef = useRef(null);
 
   return (
-    <main className="bg-white h-screen snap-y snap-mandatory overflow-scroll animate-fade">
+    <main className="bg-white h-screen snap-y snap-mandatory overflow-scroll">
       <Hero
         aboutAppRef={aboutAppRef}
         functionalitiesRef={applicationFunctionalitiesRef}
