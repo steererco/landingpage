@@ -6,21 +6,28 @@ import twoPlayersMockup from "@/../../public/twoplayers_mockup.png"
 import handsUpMockup from "@/../../public/handsup_mockup.png"
 import { WhiteLogo } from "@/logo/WhiteLogo"
 import { WaitingListButton } from "@/components/WaitingListButton"
+import { useRef } from "react"
+import { useIsVisible } from "@/utils/useIsVisible"
 
-export const ImageSection = (): JSX.Element => (
-    <div className="snap-start flex flex-row mobile:justify-center gap-[20px] mobile:gap-[30px] overflow-y-scroll no-scrollbar mobile:overflow-auto h-screen items-center mobile:px-20 px-5">
-        <div className="flex mobile:flex-1 h-[80%] mobile:h-[40vw] gap-[30px]">
-            <div className="flex flex-col h-full w-screen w-[330px] mobile:w-full gap-[30px] justify-between">
-                <FirstRow />
-                <SecondRow />
+export const ImageSection = (): JSX.Element => {
+    const imageSectionRef = useRef(null)
+    const isVisible = useIsVisible(imageSectionRef)
+
+    return (
+        <div ref={imageSectionRef} className={`snap-start flex flex-row mobile:justify-center gap-[20px] mobile:gap-[30px] overflow-y-scroll no-scrollbar mobile:overflow-auto h-screen items-center mobile:px-20 px-5 transition-opacity ease-in duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            <div className="flex mobile:flex-1 h-[80%] mobile:h-[40vw] gap-[30px]">
+                <div className="flex flex-col h-full w-screen w-[330px] mobile:w-full gap-[30px] justify-between">
+                    <FirstRow />
+                    <SecondRow />
+                </div>
+            </div>
+            <div className="flex mobile:flex-1 mobile:h-[40vw] h-[80%] mobile:h-max-[80%] flex-row gap-[20px] mobile:gap-[30px]">
+                <BlueBox />
+                <SecondCol />
             </div>
         </div>
-        <div className="flex mobile:flex-1 mobile:h-[40vw] h-[80%] mobile:h-max-[80%] flex-row gap-[20px] mobile:gap-[30px]">
-            <BlueBox />
-            <SecondCol />
-        </div>
-    </div>
-)
+    )
+}
 
 const FirstRow = (): JSX.Element => (
     <div className="mobile:h-[47.3%] h-full">
