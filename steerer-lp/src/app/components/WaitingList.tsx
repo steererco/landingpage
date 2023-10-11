@@ -10,7 +10,7 @@ export const WaitingList = ({ myRef }: { myRef: MutableRefObject<null> }): JSX.E
     const isVisible = useIsVisible(myRef)
 
     return (
-        <div ref={myRef} className={`snap-center mobile:h-screen px-5 mobile:px-20 mt-[93px] mobile:mt-0 flex items-center transition-opacity ease-in duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+        <div ref={myRef} className={`snap-center mobile:h-screen px-5 mobile:px-20 mt-[93px] mobile:mt-0 mobile:mb-20 flex items-center transition-opacity ease-in duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             <div className="flex mobile:items-end mobile:h-[70vh] w-full relative">
                 <Backdrop />
                 <div className="flex flex-col-reverse mobile:flex-row justify-end items-center mobile:items-end mobile:justify-between w-full">
