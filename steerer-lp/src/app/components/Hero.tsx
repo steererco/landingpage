@@ -1,23 +1,29 @@
 import { Header } from "@/components/Header";
 import { TextRow } from "./TextRow";
-import { Dispatch, MutableRefObject, SetStateAction } from "react";
+import { Dispatch, MutableRefObject, SetStateAction, useRef } from "react";
 import { WaitingListButton } from "@/components/WaitingListButton";
 import mockup from "@/../../public/hero_mockup.png";
 import Image from "next/image";
+import { useIsVisible } from "@/utils/useIsVisible";
 
-export const Hero = ({ aboutAppRef, functionalitiesRef, waitingListRef, openDrawer, setOpenDrawer }: { aboutAppRef: MutableRefObject<null>, functionalitiesRef: MutableRefObject<null>, waitingListRef: MutableRefObject<null>, openDrawer: boolean, setOpenDrawer: Dispatch<SetStateAction<boolean>> }): JSX.Element => (
-    <div className="snap-start pb-[160px]">
-        <div className="h-screen flex flex-col justify-between">
-            <Header waitingListRef={waitingListRef} aboutAppRef={aboutAppRef} functionalitiesRef={functionalitiesRef} isOpen={openDrawer} setIsOpen={setOpenDrawer} />
-            <div className="flex flex-col mobile:h-[85%]">
-                <TextWithUnderline />
-                <Subtitle />
-                <ImageComponent />
+export const Hero = ({ aboutAppRef, functionalitiesRef, waitingListRef, openDrawer, setOpenDrawer }: { aboutAppRef: MutableRefObject<null>, functionalitiesRef: MutableRefObject<null>, waitingListRef: MutableRefObject<null>, openDrawer: boolean, setOpenDrawer: Dispatch<SetStateAction<boolean>> }): JSX.Element => {
+    const heroRef = useRef(null)
+    const isVisible = useIsVisible(heroRef)
+
+    return (
+        <div ref={heroRef} className={`snap-start pb-[160px] transition-opacity ease-in duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            <div className="h-screen flex flex-col justify-between">
+                <Header waitingListRef={waitingListRef} aboutAppRef={aboutAppRef} functionalitiesRef={functionalitiesRef} isOpen={openDrawer} setIsOpen={setOpenDrawer} />
+                <div className="flex flex-col mobile:h-[85%]">
+                    <TextWithUnderline />
+                    <Subtitle />
+                    <ImageComponent />
+                </div>
             </div>
+            <TextRow />
         </div>
-        <TextRow />
-    </div>
-)
+    )
+}
 
 const TextWithUnderline = (): JSX.Element => (
     <div className="w-full flex justify-center mt-[67px] mobile:mt-0">
