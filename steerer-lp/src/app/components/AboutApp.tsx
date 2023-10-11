@@ -14,19 +14,18 @@ export const AboutApp = ({ myRef }: { myRef: MutableRefObject<null> }): JSX.Elem
 
     return (
         <div ref={myRef} className={`snap-start pt-[100px] pb-[300px] transition-opacity ease-in duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <FirstRow />
+            <FirstRow isVisible={isVisible} />
             <SecondRow />
         </div>
     )
 }
 
-const FirstRow = (): JSX.Element => (
+const FirstRow = ({ isVisible }: { isVisible: boolean }): JSX.Element => (
     <div className="bg-white px-5 mobile:px-20 flex flex-col-reverse mobile:flex-row justify-center justify-around items-center">
         <div className="relative mt-12 mobile:mt-0 flex items-end justify-center bg-gray1/[.1] rounded-[20px] mobile:w-5/12 max-w-[578px] h-2/3 max-h-[570px]" >
-            <TimeCard />
-            {/* <PlayerCard /> */}
-            <GoalCard />
-            <CardsCard />
+            <TimeCard isVisible={isVisible} />
+            <GoalCard isVisible={isVisible} />
+            <CardsCard isVisible={isVisible} />
             <Image src={gameMockup} alt="steerer" className="mx-[50px] mobile:px-0 mt-[16px] mobile:mt-0" />
         </div>
         <div className="flex flex-col mobile:w-5/12">
@@ -40,31 +39,20 @@ const FirstRow = (): JSX.Element => (
     </div>
 )
 
-const TimeCard = (): JSX.Element => (
-    <div className="absolute flex items-center justify-center bg-base-blue3 w-[46px] mobile:w-[80px] h-[30px] mobile:h-[53px] rounded-[8px] mobile:rounded-xl top-[44px] mobile:top-[76px] -right-[10px] mobile:-right-[26px]">
+const TimeCard = ({ isVisible }: { isVisible: boolean }): JSX.Element => (
+    <div className={`absolute flex items-center justify-center bg-base-blue3 w-[46px] mobile:w-[80px] h-[30px] mobile:h-[53px] rounded-[8px] mobile:rounded-xl transition-position ease-in duration-[0.7s] ${isVisible ? 'top-[44px] mobile:top-[76px] -right-[10px] mobile:-right-[26px] ' : 'top-1/2 right-1/2'}`}>
         <p className="text-white text-center font-poppins font-medium text-base mobile:text-2xl">83'</p>
     </div>
 )
 
-const PlayerCard = (): JSX.Element => (
-    <div className="absolute flex flex-row items-center bg-base-blue2 w-[112px] mobile:w-[190px] h-[39px] mobile:h-[66px] rounded-[6px] mobile:rounded-[10px] top-[64px] mobile:top-[96px] -left-[7px] mobile:-left-[42px]">
-        <div className="rounded-full w-[30px] h-[30px] mobile:w-[50px] mobile:h-[50px] ml-1 mobile:ml-2">
-            <Image src={playerImage} alt="player" className="rounded-full" />
-        </div>
-        <div className="flex flex-col justify-center font-poppins ml-3 text-white">
-            <p className="text-[8px] mobile:text-sm font-semibold">Ethan Brooks</p>
-            <p className="text-[7px] mobile:text-xs font-medium text-white/[.7]">36 goals</p>
-        </div>
-    </div>
-)
-const CardsCard = (): JSX.Element => (
-    <div className="absolute flex items-center justify-center bg-base-blue2 rounded-[3px] mobile:rounded-[5px] w-[29px] h-[29px] mobile:w-[50px] mobile:h-[50px] right-[33px] bottom-[155px] mobile:right-[68px] mobile:bottom-[268px]">
+const CardsCard = ({ isVisible }: { isVisible: boolean }): JSX.Element => (
+    <div className={`absolute flex items-center justify-center bg-base-blue2 rounded-[3px] mobile:rounded-[5px] w-[29px] h-[29px] mobile:w-[50px] mobile:h-[50px] transition-position ease-in duration-[0.7s] ${isVisible ? 'right-[33px] bottom-[155px] mobile:right-[68px] mobile:bottom-[268px]' : 'right-1/2 bottom-1/2'}`}>
         <CardsIcon className="mobile:w-[33px] mobile:h-[40px] stroke-white" />
     </div>
 )
 
-const GoalCard = (): JSX.Element => (
-    <div className="absolute flex items-center justify-center bg-base-blue3 rounded-[6px] mobile:rounded-[10px] w-[40px] h-[40px] mobile:w-[67px] mobile:h-[67px] -left-[6px] bottom-[66px] mobile:-left-[23px] mobile:bottom-[112px]">
+const GoalCard = ({ isVisible }: { isVisible: boolean }): JSX.Element => (
+    <div className={`absolute flex items-center justify-center bg-base-blue3 rounded-[6px] mobile:rounded-[10px] w-[40px] h-[40px] mobile:w-[67px] mobile:h-[67px] transition-position ease-in duration-[0.7s] ${isVisible ? '-left-[6px] bottom-[66px] mobile:-left-[23px] mobile:bottom-[112px] ' : 'left-1/2 bottom-1/2'}`}>
         <GoalIcon className="w-[30px] h-[30px] mobile:w-[50px] mobile:h-[50px] stroke-white stroke-[0.9]" />
     </div>
 )

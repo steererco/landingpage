@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      transitionProperty: {
+        position: 'top, right, bottom, left',
+      },
       animation: {
         fade: 'fadeOut 1.5s ease-in-out',
       },
