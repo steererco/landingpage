@@ -4,20 +4,25 @@ import mockup from '@/../../public/functionalities_mockup.png'
 import playerImage from '@/../../public/player_image2.png'
 import { WhistleIcon } from "@/icons/WhistleIcon";
 import { LiveIcon } from "@/icons/LiveIcon";
+import { useIsVisible } from "@/utils/useIsVisible";
 
-export const ApplicationFunctionalities = ({ myRef }: { myRef: MutableRefObject<null> }): JSX.Element => (
-    <div ref={myRef} className="snap-start bg-white mobile:h-screen flex flex-col items-center justify-center mt-[111px] mobile:mt-0 px-5 mobile:px-20">
-        <TextArea />
-        <div className="flex flex-col mobile:flex-row justify-center w-full mobile:mt-32 mt-[44px] mobile:h-2/4">
-            <ImageBlock />
-            <div className="flex flex-col mt-4 mobile:mt-0 mobile:w-1/2">
-                <BigTextBlock />
-                <SmallTextBlock>Review your game through thorough analysis</SmallTextBlock>
-                <SmallTextBlock>Connect with determined peers in the game</SmallTextBlock>
+export const ApplicationFunctionalities = ({ myRef }: { myRef: MutableRefObject<null> }): JSX.Element => {
+    const isVisible = useIsVisible(myRef)
+
+    return (
+        <div ref={myRef} className={`snap-start bg-white mobile:h-screen flex flex-col items-center justify-center mt-[111px] mobile:mt-0 px-5 mobile:px-20 transition-opacity ease-in duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            <TextArea />
+            <div className="flex flex-col mobile:flex-row justify-center w-full mobile:mt-32 mt-[44px] mobile:h-2/4">
+                <ImageBlock />
+                <div className="flex flex-col mt-4 mobile:mt-0 mobile:w-1/2">
+                    <BigTextBlock />
+                    <SmallTextBlock>Review your game through thorough analysis</SmallTextBlock>
+                    <SmallTextBlock>Connect with determined peers in the game</SmallTextBlock>
+                </div>
             </div>
         </div>
-    </div>
-)
+    )
+}
 
 const SmallTextBlock = ({ children }: { children: ReactNode }): JSX.Element => (
     <div className="flex bg-gray1/[.1] h-1/3 mt-4 items-center py-[30px] mobile:py-0 px-8 rounded-[20px]">
