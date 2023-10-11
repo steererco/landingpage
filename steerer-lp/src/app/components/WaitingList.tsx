@@ -3,23 +3,28 @@ import Image from "next/image";
 import mockupMobile from "@/../../public/waitinglist_mockup_mobile.png"
 import mockupDesktop from "@/../../public/waitinglist_mockup_desktop.png"
 import { MutableRefObject } from "react";
+import { useIsVisible } from "@/utils/useIsVisible";
 
 
-export const WaitingList = ({ myRef }: { myRef: MutableRefObject<null> }): JSX.Element => (
-    <div ref={myRef} className="snap-center mobile:h-screen px-5 mobile:px-20 mt-[93px] mobile:mt-0 flex items-center">
-        <div className="flex mobile:items-end mobile:h-[70vh] w-full relative">
-            <Backdrop />
-            <div className="flex flex-col-reverse mobile:flex-row justify-end items-center mobile:items-end mobile:justify-between w-full">
-                <div className="flex flex-col z-0 items-center mobile:items-start mobile:justify-center text-center mobile:text-start px-[20px] mt-[50px] mobile:mt-0 text-black w-full mobile:w-2/4 mobile:h-[50vh]">
-                    <Title />
-                    <Subtitle />
-                    <Button />
+export const WaitingList = ({ myRef }: { myRef: MutableRefObject<null> }): JSX.Element => {
+    const isVisible = useIsVisible(myRef)
+
+    return (
+        <div ref={myRef} className={`snap-center mobile:h-screen px-5 mobile:px-20 mt-[93px] mobile:mt-0 flex items-center transition-opacity ease-in duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            <div className="flex mobile:items-end mobile:h-[70vh] w-full relative">
+                <Backdrop />
+                <div className="flex flex-col-reverse mobile:flex-row justify-end items-center mobile:items-end mobile:justify-between w-full">
+                    <div className="flex flex-col z-0 items-center mobile:items-start mobile:justify-center text-center mobile:text-start px-[20px] mt-[50px] mobile:mt-0 text-black w-full mobile:w-2/4 mobile:h-[50vh]">
+                        <Title />
+                        <Subtitle />
+                        <Button />
+                    </div>
+                    <Mockup />
                 </div>
-                <Mockup />
             </div>
         </div>
-    </div>
-)
+    )
+}
 
 const Backdrop = (): JSX.Element => (
     <div className="absolute bg-gray1/[.1] h-full mobile:h-[50vh] justify-center mobile:justify-start rounded-[20px] w-full " />

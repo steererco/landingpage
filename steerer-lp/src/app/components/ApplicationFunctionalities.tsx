@@ -10,7 +10,7 @@ export const ApplicationFunctionalities = ({ myRef }: { myRef: MutableRefObject<
     const isVisible = useIsVisible(myRef)
 
     return (
-        <div ref={myRef} className={`snap-start bg-white mobile:h-screen flex flex-col items-center justify-center mt-[111px] mobile:mt-0 px-5 mobile:px-20 transition-opacity ease-in duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+        <div ref={myRef} className={`snap-start bg-white mobile:h-screen flex flex-col items-center justify-center mt-[111px] mobile:mt-0 mobile:mb-20 px-5 mobile:px-20 transition-opacity ease-in duration-700 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
             <TextArea />
             <div className="flex flex-col mobile:flex-row justify-center w-full mobile:mt-32 mt-[44px] mobile:h-2/4">
                 <ImageBlock />
