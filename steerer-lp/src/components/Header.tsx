@@ -1,21 +1,10 @@
 'use client'
 
 import { BlueLogo } from "@/logo/BlueLogo"
-import { MenuIcon } from "@/icons/MenuIcon"
 import { Dispatch, MutableRefObject, SetStateAction, useEffect, useState } from "react";
-import { DefaultButton } from "./DefaultButton";
-import { ArrowIcon } from "@/icons/ArrowIcon";
 import { handleScroll } from "@/utils/scroll";
 
 export const Header = ({ aboutAppRef, functionalitiesRef, waitingListRef, isOpen, setIsOpen }: { aboutAppRef: MutableRefObject<null>, functionalitiesRef: MutableRefObject<null>, waitingListRef: MutableRefObject<null>, isOpen: boolean, setIsOpen: Dispatch<SetStateAction<boolean>> }): JSX.Element => {
-    // const handleWindowResize = () => window.innerWidth >= 900 && setIsOpen(false)
-
-    // useEffect(() => {
-    //     window.addEventListener('resize', handleWindowResize);
-
-    //     return () => window.removeEventListener('resize', handleWindowResize)
-    // }, [])
-
     return (
         <header className="flex flex-row justify-center mobile:justify-between mx-5 mobile:mx-20 pt-5 static bg-white">
             <Logo />
