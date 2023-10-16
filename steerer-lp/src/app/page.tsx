@@ -21,7 +21,7 @@ const Home = (): JSX.Element => {
 
   return (
     <ModalProvider>
-      <main className="bg-white h-screen snap-y snap-mandatory overflow-scroll">
+      <main className="bg-white h-screen snap-y snap-mandatory scroll-smooth overflow-scroll">
         <Modal />
         <Hero
           aboutAppRef={aboutAppRef}
