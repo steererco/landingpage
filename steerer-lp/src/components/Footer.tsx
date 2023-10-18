@@ -8,7 +8,7 @@ import { MutableRefObject, ReactNode } from "react"
 
 export const Footer = ({ aboutAppRef, functionalitiesRef, waitingListRef }: { aboutAppRef: MutableRefObject<null>, functionalitiesRef: MutableRefObject<null>, waitingListRef: MutableRefObject<null> }): JSX.Element => (
     <div className="flex justify-center"> 
-        <div className="snap-start flex flex-col-reverse w-full mobile:flex-row justify-center mobile:justify-between max-w-[1444px] pb-16 mx-5 mobile:mx-20 mobile:h-[60vh] mt-[80px] mobile:mt-0">
+        <div className="snap-start flex flex-col-reverse w-full mobile:flex-row justify-center mobile:justify-between max-w-[1444px] pb-16 mx-5 mobile:mx-20 h-[100vh] mobile:h-[60vh] pt-14 mobile:mt-0">
             <LastCol aboutAppRef={aboutAppRef} functionalitiesRef={functionalitiesRef} waitingListRef={waitingListRef} />
             <div className="flex flex-col items-center mobile:items-start justify-between h-full text-black">
                 <AboutApp />
