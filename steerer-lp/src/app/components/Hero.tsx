@@ -44,7 +44,7 @@ const TextWithUnderline = (): JSX.Element => (
 )
 
 const Subtitle = (): JSX.Element => (
-    <div className="flex flex-col w-full items-center">
+    <div className="flex flex-col mb-12 w-full items-center">
         <p className="max-w-[644px] text-sm mobile:text-xl font-inter text-black4 text-center mx-5">The app that goes beyond the four lines, you are just one download away from becoming a legend. </p>
         <div className="w-[262px] mt-[32px] mobile:mt-[48px] ml-7">
             <WaitingListButton />
