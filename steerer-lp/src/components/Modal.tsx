@@ -12,8 +12,8 @@ export const Modal = (): JSX.Element | null => {
             <div className={`flex flex-col w-[360px] h-[466px] rounded-[20px] bg-white px-6 pt-3 pb-6 transition-all ${context.isOpen ? "scale-100 opacity-100" : "scale-125 opacity-0"}`}>
                 <Close onClick={() => context.changeIsOpen(false)} />
                 <Input placeholder="Name:" id="name" type="text" />
-                <Input placeholder="E-mail:" id="email" type="email" />
-                <Input placeholder="WhatsApp:" id="wpp" type="tel" />
+                <Input placeholder="Email:" id="email" type="email" />
+                <Input placeholder="Phone number:" id="wpp" type="tel" />
                 <div className="h-6"></div>
                 <Button />
                 <p className="text-black/[.7] text-left font-inter font-medium text-[10px] leading-4 mt-6">
