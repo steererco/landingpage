@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { Clickable } from "./Clickable";
 import { useForm, SubmitHandler, UseFormRegister } from "react-hook-form"
 import { useEffect } from "react";
+import { useFormspark } from "@formspark/use-formspark";
 
 interface IFormInput {
     name: string
@@ -15,7 +16,16 @@ export const Modal = (): JSX.Element | null => {
     const { register, handleSubmit, watch } = useForm<IFormInput>({ mode: 'onChange' })
     const context = useContext(ModalContext)
 
-    const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data)
+    const formId = process.env.NEXT_PUBLIC_FORMSPARK_FORM_ID!
+
+    const [submit, submitting] = useFormspark({
+        formId: formId,
+    })
+
+    const onSubmit: SubmitHandler<IFormInput> = async (data) => {
+        if (submitting) return
+        await submit({ ...data })
+    }
 
     useEffect(() => {
         console.log(watch('name'))
