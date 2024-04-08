@@ -5,9 +5,9 @@ import Link from "next/link";
 const Page = () => {
   return (
     <div className="container mx-auto py-4 bg-white text-black">
-      <Link className="mb-4" href="/">
+      <header className="flex justify-between items-center border-b pb-3 mb-6">
         <Logo />
-      </Link>
+      </header>
       <h1 className="text-3xl font-bold">Terms</h1>
       <div dangerouslySetInnerHTML={{ __html: content }}></div>
     </div>

@@ -25,8 +25,10 @@ const HelpPage = () => {
               <h2 className="text-xl font-semibold mb-2">Support</h2>
               <h3 className="font-bold text-lg mb-2">FAQ</h3>
               <p className="mb-4">
-                Can't find answer you're looking for? Please write an email to
-                support team
+                Can't find answer you're looking for?{" "}
+                <Link href="mailto:support@steerer.co">
+                  Please write an email to support team
+                </Link>
               </p>
             </div>
             <div>

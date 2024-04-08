@@ -9,6 +9,7 @@ import {
   useState,
 } from "react";
 import { handleScroll } from "@/utils/scroll";
+import Link from "next/link";
 
 export const Header = ({
   aboutAppRef,
@@ -71,11 +72,13 @@ const OptionsList = ({
 
 export const Logo = (): JSX.Element => (
   <>
-    <div className="block mobile:hidden">
-      <BlueLogo className="w-32" />
-    </div>
-    <div className="hidden mobile:block">
-      <BlueLogo className="w-36.5" />
-    </div>
+    <Link href="/">
+      <div className="block mobile:hidden">
+        <BlueLogo className="w-32" />
+      </div>
+      <div className="hidden mobile:block">
+        <BlueLogo className="w-36.5" />
+      </div>
+    </Link>
   </>
 );
