@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Logo } from "@/components/Header";
 import Link from "next/link";
+import { Footer } from "@/components/Footer";
 
 const HelpPage = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -27,7 +28,20 @@ const HelpPage = () => {
               <p className="mb-4">
                 Can't find answer you're looking for?{" "}
                 <Link href="mailto:support@steerer.co">
-                  Please write an email to support team
+                  Please write an email to{" "}
+                  <span className="text-blue-600 font-bold">
+                    support@steerer.co
+                  </span>
+                </Link>
+              </p>
+              <p className="mb-4">
+                <Link className="text-blue-600" href="/privacy-policy">
+                  Privacy Policy
+                </Link>
+              </p>
+              <p className="mb-4">
+                <Link className="text-blue-600" href="/terms-of-service">
+                  Terms of Service
                 </Link>
               </p>
             </div>
@@ -123,13 +137,13 @@ const HelpPage = () => {
                 <div className="accordion-item">
                   <h3
                     className="accordion-header font-bold text-lg mb-2 cursor-pointer"
-                    onClick={() => toggleAccordion(0)}
+                    onClick={() => toggleAccordion(4)}
                   >
                     How do I update my account information?
                   </h3>
                   <div
                     className={`accordion-content ${
-                      activeIndex === 0 ? "block" : "hidden"
+                      activeIndex === 4 ? "block" : "hidden"
                     }`}
                   >
                     <p>
@@ -151,14 +165,14 @@ const HelpPage = () => {
                 <div className="accordion-item">
                   <h3
                     className="accordion-header font-bold text-lg mb-2 cursor-pointer"
-                    onClick={() => toggleAccordion(1)}
+                    onClick={() => toggleAccordion(5)}
                   >
                     What should I do if I encounter technical issues with the
                     app?
                   </h3>
                   <div
                     className={`accordion-content ${
-                      activeIndex === 1 ? "block" : "hidden"
+                      activeIndex === 5 ? "block" : "hidden"
                     }`}
                   >
                     <p>
@@ -184,13 +198,13 @@ const HelpPage = () => {
                 <div className="accordion-item">
                   <h3
                     className="accordion-header font-bold text-lg mb-2 cursor-pointer"
-                    onClick={() => toggleAccordion(2)}
+                    onClick={() => toggleAccordion(6)}
                   >
                     Can I use the app on multiple devices?
                   </h3>
                   <div
                     className={`accordion-content ${
-                      activeIndex === 2 ? "block" : "hidden"
+                      activeIndex === 6 ? "block" : "hidden"
                     }`}
                   >
                     <p>
@@ -203,13 +217,13 @@ const HelpPage = () => {
                 <div className="accordion-item">
                   <h3
                     className="accordion-header font-bold text-lg mb-2 cursor-pointer"
-                    onClick={() => toggleAccordion(3)}
+                    onClick={() => toggleAccordion(7)}
                   >
                     How do I delete my account?
                   </h3>
                   <div
                     className={`accordion-content ${
-                      activeIndex === 3 ? "block" : "hidden"
+                      activeIndex === 7 ? "block" : "hidden"
                     }`}
                   >
                     <p>
