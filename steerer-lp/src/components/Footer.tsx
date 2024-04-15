@@ -7,23 +7,31 @@ import { handleScroll } from "@/utils/scroll";
 import Link from "next/link";
 import { MutableRefObject, ReactNode } from "react";
 
-export const Footer = ({
+interface FooterProps {
+  aboutAppRef?: MutableRefObject<null>;
+  functionalitiesRef?: MutableRefObject<null>;
+  waitingListRef?: MutableRefObject<null>;
+}
+
+export const Footer: React.FC<FooterProps> = ({
   aboutAppRef,
   functionalitiesRef,
   waitingListRef,
-}: {
-  aboutAppRef: MutableRefObject<null>;
-  functionalitiesRef: MutableRefObject<null>;
-  waitingListRef: MutableRefObject<null>;
-}): JSX.Element => (
+}: FooterProps): JSX.Element => (
   <div className="flex justify-center">
     <div className="snap-start flex flex-col-reverse w-full mobile:flex-row justify-center mobile:justify-between max-w-[1444px] pb-16 mx-5 mobile:mx-20 h-[100vh] mobile:h-[60vh] pt-14 mobile:mt-0">
-      <LastCol
-        aboutAppRef={aboutAppRef}
-        functionalitiesRef={functionalitiesRef}
-        waitingListRef={waitingListRef}
-      />
-      <div className="flex flex-col items-center mobile:items-start justify-between h-full text-black">
+      {aboutAppRef && functionalitiesRef && waitingListRef && (
+        <LastCol
+          aboutAppRef={aboutAppRef}
+          functionalitiesRef={functionalitiesRef}
+          waitingListRef={waitingListRef}
+        />
+      )}
+      <div
+        className={`flex items-center items-end mobile:items-start justify-between h-full text-black ${
+          aboutAppRef ? "flex-col" : "flex-row"
+        }`}
+      >
         <AboutApp />
         <Newsletter />
       </div>
