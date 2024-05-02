@@ -118,7 +118,7 @@ const Button = ({
 }: React.InputHTMLAttributes<HTMLInputElement>): JSX.Element => (
   <input
     type="submit"
-    value="CONFIRM SUBSCRIPTION"
+    value="Request a demo"
     className="bg-base-blue3 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-[5px] font-inter font-semibold"
     {...props}
   />

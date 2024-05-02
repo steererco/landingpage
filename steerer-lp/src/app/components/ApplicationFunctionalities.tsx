@@ -25,19 +25,19 @@ export const ApplicationFunctionalities = ({
         <ImageBlock />
         <div className="flex flex-col mt-4 mobile:mt-0 mobile:w-1/2 gap-4">
           <BigTextBlock
-            title="Unlock your utmost potential
+            title="Access professional analytics at your fingertips
             "
-            description="Unlock your highest potential using expert strategies to elevate your performance to new heights.
+            description="Unlock your team's highest potential by utilizing expert strategies that elevate performance to new heights. Analyze game and player statistics to identify effective strategies for enhancing output.
             "
           />
           <BigTextBlock
-            title="Review your game through thorough analysis
+            title="Connect with determined peers in the game
             "
-            description="Get the most from your field performance and make it better with our football team analytics in the app. "
+            description="Find people who have the same passion for the game as you. Use the app to become the best soccer coach, the best club manager or the best league owner for your players. Share knowledge and learn yourself."
           />
           <BigTextBlock
-            title="Connect with determined peers in the game"
-            description="Find people who have the same passion for the game as you. Use the app to become the best soccer coach, the best club manager or the best league owner for your players. 
+            title="Stay on schedule and receive notifications"
+            description="Have your team’s schedule in one click distance. Set matches, add your soccer players and set notifications on the most important games. Get news as fast as possible.
             "
           />
         </div>

@@ -25,7 +25,7 @@ export const Header = ({
   setIsOpen: Dispatch<SetStateAction<boolean>>;
 }): JSX.Element => {
   return (
-    <header className="flex flex-row justify-center mobile:justify-between mx-5 mobile:mx-20 pt-5 static bg-white">
+    <header className="flex flex-row justify-center mobile:justify-between mx-5 mobile:mx-20 pt-5 static">
       <Logo />
       <OptionsList
         aboutAppRef={aboutAppRef}

@@ -49,7 +49,7 @@ const FirstRow = ({
         </div>
         <div className="flex flex-col mobile:w-5/12">
           <p className="text-black text-center mobile:text-left font-poppins font-medium text-3xl mobile:text-4xl">
-            Get ready for a Game Revolution with the Steerer App!
+            Get your soccer team to a new level with Steerer
           </p>
           <p className="text-black/[.7] font-inter text-center mobile:text-left text-base mobile:text-xl mt-6">
             We understand that soccer is more than just a sport for you. It's
