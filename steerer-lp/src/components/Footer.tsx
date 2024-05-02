@@ -135,16 +135,27 @@ const Options = ({
 const Socials = (): JSX.Element => (
   <div className="flex flex-row justify-around mobile:justify-start mt-8 w-full">
     <SocialOption>
-      <InstagramIcon />
+      <Link href={"https://www.instagram.com/steerer.co/"} target="_blank">
+        <InstagramIcon />
+      </Link>
     </SocialOption>
     <SocialOption>
-      <TwitterIcon />
+      <Link href={"https://twitter.com/SteererCo "} target="_blank">
+        <TwitterIcon />
+      </Link>
     </SocialOption>
     <SocialOption>
-      <LinkedinIcon />
+      <Link
+        href={"https://www.linkedin.com/company/steererco/"}
+        target="_blank"
+      >
+        <LinkedinIcon />
+      </Link>
     </SocialOption>
     <SocialOption>
-      <FacebookIcon />
+      <Link href={"https://www.facebook.com/steererco "} target="_blank">
+        <FacebookIcon />
+      </Link>
     </SocialOption>
   </div>
 );
