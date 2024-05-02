@@ -97,7 +97,7 @@ const Subtitle = (): JSX.Element => (
     </p>
     <div className="w-full mt-[32px] items-center justify-center gap-4 grid grid-cols-2 md:grid-cols-3 max-w-[552px] mobile:mt-[48px] px-10">
       <Link
-        className="bg-black rounded-md h-full flex justify-center items-center p-[2px]"
+        className="bg-black rounded-md flex justify-center items-center p-[2px]"
         href="https://play.google.com/store/apps/details?id=com.mycompany.steerer&hl=en_US"
         target="_blank"
       >
@@ -109,7 +109,7 @@ const Subtitle = (): JSX.Element => (
         />
       </Link>
       <Link
-        className="bg-black rounded-md h-full flex justify-center items-center p-[2px]"
+        className="bg-black rounded-md flex justify-center items-center p-[2px]"
         href="https://apps.apple.com/app/steerer/id6478477404"
         target="_blank"
       >
