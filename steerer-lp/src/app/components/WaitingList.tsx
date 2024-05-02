@@ -53,7 +53,7 @@ const Subtitle = (): JSX.Element => (
 );
 
 const Button = (): JSX.Element => (
-  <div className="w-full mt-[32px] items-center justify-center gap-4 grid grid-cols-2 md:grid-cols-3 mobile:mt-[48px] px-10">
+  <div className="w-full mt-[32px] items-center justify-center gap-4 grid grid-cols-2 md:grid-cols-3 mobile:mt-[48px] px-10 md:px-0 max-w-[500px]">
     <Link
       className="bg-black rounded-md h-full flex justify-center items-center p-[2px]"
       href="https://play.google.com/store/apps/details?id=com.mycompany.steerer&hl=en_US"
