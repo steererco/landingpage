@@ -66,7 +66,7 @@ const BlueBox = (): JSX.Element => (
   <div className="mobile:w-full w-full md:w-[80vw] py-10 md:py-0 md:h-full rounded-[20px] bg-gradient-to-b from-base-blue3 to-base-blue1">
     <div className="flex flex-col h-full px-[18px] justify-around items-center">
       <WhiteLogo />
-      <p className="font-poppins text-white font-medium text-[34px] mobile:text-[24px] text-center">
+      <p className="font-poppins text-white font-medium text-[34px] mobile:text-[24px] text-center md:mt-[10px] mt-[20px]">
         Awaken your greatness in soccer with the Steerer app!
       </p>
       <div className="w-full mt-[32px] items-center justify-center gap-4 grid grid-cols-2  mobile:mt-[48px]">
