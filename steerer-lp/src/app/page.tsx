@@ -30,7 +30,7 @@ const Home = (): JSX.Element => {
 
   return (
     <ModalProvider>
-      <main className="bg-white h-screen snap-y snap-mandatory scroll-smooth overflow-scroll overflow-x-hidden">
+      <main className="bg-white h-screen md:snap-y md:snap-mandatory scroll-smooth overflow-scroll overflow-x-hidden">
         <Modal />
         <StyledDiv>
           <Hero
