@@ -80,7 +80,7 @@ const Button = (): JSX.Element => (
 const Mockup = (): JSX.Element => (
   <div className="z-0">
     <div className="mobile:hidden">
-      <Image src={mockupMobile} alt="teste" />
+      <Image src={mockupDesktop} alt="teste" />
     </div>
     <div className="hidden mobile:flex px-10">
       <Image src={mockupDesktop} alt="teste" />

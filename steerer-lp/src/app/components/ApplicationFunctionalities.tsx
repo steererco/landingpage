@@ -16,7 +16,7 @@ export const ApplicationFunctionalities = ({
   return (
     <div
       ref={myRef}
-      className={`snap-start  mobile:h-screen flex flex-col items-center justify-center mt-[111px] mobile:mt-0 mobile:mb-20 px-5 py-16 mobile:px-20 mobile:py-0 transition-opacity ease-in duration-700 ${
+      className={`snap-start  mobile:h-screen flex flex-col items-center justify-center md:mt-[111px] mobile:mt-0 md:mb-20 px-5 py-16 md:px-20 md:py-0 transition-opacity ease-in duration-700 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >

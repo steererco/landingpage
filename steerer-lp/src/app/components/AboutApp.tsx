@@ -115,7 +115,7 @@ const SecondRow = (): JSX.Element => {
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="min-h-screen mobile:mt-[118px] bg-white px-5 mobile:px-20 py-16 mobile:py-0 mobile:mt-16 flex flex-col mobile:flex-row justify-center justify-around items-center">
+      <div className="min-h-screen md:mt-[118px] bg-white px-5 md:px-20 py-16 md:py-0 mobile:mt-16 flex flex-col md:flex-row justify-center justify-around items-center">
         <div className="flex flex-col mobile:w-5/12">
           <p className="text-black text-center mobile:text-left font-poppins font-medium text-3xl mobile:text-4xl">
             Find sponsors near you

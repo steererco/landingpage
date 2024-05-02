@@ -50,8 +50,8 @@ export const Hero = ({
 };
 
 const TextWithUnderline = (): JSX.Element => (
-  <div className="w-full flex justify-center mt-[67px] mobile:mt-0">
-    <div className="relative flex mb-[30px] mobile:mb-[44px] w-[335px] mobile:w-[900px] mx-5 mobile:mx-auto flex-col items-end">
+  <div className="w-full flex justify-center md:mt-[67px] ">
+    <div className="relative flex mb-[30px] md:mb-[44px] w-[335px] mobile:w-[900px] mx-5 mobile:mx-auto flex-col items-end">
       <h1 className="text-black text-center font-poppins font-medium text-[40px] mobile:text-6xl">
         Awaken your inner greatness!
       </h1>
