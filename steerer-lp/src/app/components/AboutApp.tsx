@@ -36,7 +36,7 @@ const FirstRow = ({
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="h-[100dvh] py-16 mobile:py-0 bg-white px-5 mobile:px-20 flex flex-col-reverse mobile:flex-row justify-center justify-around items-center">
+      <div className="min-h-screen py-16 mobile:py-0 bg-white px-5 mobile:px-20 flex flex-col-reverse mobile:flex-row justify-center justify-around items-center">
         <div className="relative mt-12 mobile:mt-0 flex items-end justify-center bg-gray1/[.1] rounded-[20px] mobile:w-5/12 max-w-[578px] h-2/3 max-h-[570px]">
           <TimeCard isVisible={isVisible} />
           <GoalCard isVisible={isVisible} />
@@ -115,7 +115,7 @@ const SecondRow = (): JSX.Element => {
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="h-[100dvh] mobile:mt-[118px] bg-white px-5 mobile:px-20 py-16 mobile:py-0 mobile:mt-16 flex flex-col mobile:flex-row justify-center justify-around items-center">
+      <div className="min-h-screen mobile:mt-[118px] bg-white px-5 mobile:px-20 py-16 mobile:py-0 mobile:mt-16 flex flex-col mobile:flex-row justify-center justify-around items-center">
         <div className="flex flex-col mobile:w-5/12">
           <p className="text-black text-center mobile:text-left font-poppins font-medium text-3xl mobile:text-4xl">
             Find sponsors near you

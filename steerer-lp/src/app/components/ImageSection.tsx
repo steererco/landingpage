@@ -17,7 +17,7 @@ export const ImageSection = (): JSX.Element => {
   return (
     <div
       ref={imageSectionRef}
-      className={`snap-start flex flex-row mobile:justify-center gap-[20px] mobile:gap-[30px] overflow-y-scroll no-scrollbar mobile:overflow-auto h-screen items-center mobile:px-20 px-5 transition-opacity ease-in duration-700 ${
+      className={`snap-start flex flex-row mobile:justify-center gap-[20px] mobile:gap-[30px] no-scrollbar mobile:overflow-auto items-center mobile:px-20 px-5 transition-opacity ease-in duration-700 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
@@ -63,7 +63,7 @@ const SecondRow = (): JSX.Element => (
 );
 
 const BlueBox = (): JSX.Element => (
-  <div className="mobile:w-full w-full md:w-[80vw] mobile:h-full rounded-[20px] bg-gradient-to-b from-base-blue3 to-base-blue1">
+  <div className="mobile:w-full w-full md:w-[80vw] py-10 md:py-0 md:h-full rounded-[20px] bg-gradient-to-b from-base-blue3 to-base-blue1">
     <div className="flex flex-col h-full px-[18px] justify-around items-center">
       <WhiteLogo />
       <p className="font-poppins text-white font-medium text-[34px] mobile:text-[24px] text-center">

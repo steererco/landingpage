@@ -30,7 +30,7 @@ export const Hero = ({
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      <div className="h-screen flex flex-col justify-between">
+      <div className="min-h-screen flex flex-col justify-between">
         <Header
           waitingListRef={waitingListRef}
           aboutAppRef={aboutAppRef}
@@ -38,7 +38,7 @@ export const Hero = ({
           isOpen={openDrawer}
           setIsOpen={setOpenDrawer}
         />
-        <div className="flex flex-col mobile:h-[85%]">
+        <div className="flex flex-col ">
           <TextWithUnderline />
           <Subtitle />
           <ImageComponent />
