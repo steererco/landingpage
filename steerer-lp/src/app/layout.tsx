@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
 import Head from "next/head";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const poppins = Poppins({
   weight: ["500", "600", "700"],
@@ -62,7 +63,20 @@ export default function RootLayout({
           }}
         />
       </Head>
+      <div style={{ position: "fixed", bottom: "10px", right: "10px" }}>
+        <a
+          href="https://www.producthunt.com/posts/steerer?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-steerer"
+          target="_blank"
+        >
+          <img
+            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=452534&theme=light"
+            alt="Steerer - Your&#0032;essential&#0032;soccer&#0032;team&#0032;management&#0032;companion | Product Hunt"
+            style={{ width: " 250px", height: "54px" }}
+          />
+        </a>
+      </div>
       <body>{children}</body>
+      <GoogleAnalytics gaId="G-4LCYZZKMTH" />
     </html>
   );
 }
