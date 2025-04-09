@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
 import Head from "next/head";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import ChatwootWidget from "../components/ChatwootWidget";
+import ZohoWidget from "../components/ZohoWidget";
 
 const poppins = Poppins({
   weight: ["500", "600", "700"],
@@ -78,7 +78,7 @@ export default function RootLayout({
       </div>
       <body>
         {children}
-        <ChatwootWidget />
+        <ZohoWidget />
       </body>
       <GoogleAnalytics gaId="G-4LCYZZKMTH" />
     </html>
