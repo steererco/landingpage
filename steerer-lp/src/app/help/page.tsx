@@ -35,12 +35,12 @@ const HelpPage = () => {
                 </Link>
               </p>
               <p className="mb-4">
-                <Link className="text-blue-600" href="/privacy-policy">
+                <Link className="text-blue-600" href="/privacy">
                   Privacy Policy
                 </Link>
               </p>
               <p className="mb-4">
-                <Link className="text-blue-600" href="/terms-of-service">
+                <Link className="text-blue-600" href="/terms">
                   Terms of Service
                 </Link>
               </p>
