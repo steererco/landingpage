@@ -1,8 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
-import { GoogleAnalytics } from "@next/third-parties/google";
-import ZohoWidget from "../components/ZohoWidget";
+import CookieConsent from "../components/CookieConsent";
 
 const poppins = Poppins({
   weight: ["500", "600", "700"],
@@ -49,9 +48,9 @@ export default function RootLayout({
     >
       <body>
         {children}
-        <ZohoWidget />
+        {/* Loads GA4 + Zoho only after opt-in; see src/components/CookieConsent.tsx */}
+        <CookieConsent gaId="G-4LCYZZKMTH" />
       </body>
-      <GoogleAnalytics gaId="G-4LCYZZKMTH" />
     </html>
   );
 }

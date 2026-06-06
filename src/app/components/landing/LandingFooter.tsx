@@ -2,6 +2,8 @@
 // their existing routes) and the social row.
 import Link from "next/link";
 
+import { CookiePrefsButton } from "../../../components/CookieConsent";
+
 import type { JSX } from "react";
 
 const COLUMNS: { heading: string; links: { label: string; href: string; external?: boolean }[] }[] =
@@ -74,6 +76,7 @@ export const LandingFooter = (): JSX.Element => (
                 </a>
               )
             )}
+            {col.heading === "Legal" && <CookiePrefsButton />}
           </div>
         ))}
       </div>
