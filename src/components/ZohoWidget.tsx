@@ -7,13 +7,13 @@ declare global {
   interface Window {
     $zoho: {
       salesiq: {
-        ready: Function;
-        [key: string]: any;
+        ready: () => void;
+        [key: string]: unknown;
       };
-      [key: string]: any;
+      [key: string]: unknown;
     };
     // Definitions only for use within the component
-    gtag?: (...args: any[]) => void;
+    gtag?: (...args: unknown[]) => void;
   }
 }
 
