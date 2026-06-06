@@ -1,59 +1,64 @@
 "use client";
 
-import { Benefits } from "./components/Benefits";
-import { ApplicationFunctionalities } from "./components/ApplicationFunctionalities";
-import { AboutApp } from "./components/AboutApp";
-import { useState, useRef } from "react";
-import { Footer } from "@/components/Footer";
-import { WaitingList } from "./components/WaitingList";
-import { Hero } from "./components/Hero";
-import { ImageSection } from "./components/ImageSection";
-import { ModalProvider } from "@/context/ModalContext";
-import { Modal } from "@/components/Modal";
-import styled from "styled-components";
+import { useEffect } from "react";
+import { FeatureBento } from "./components/landing/FeatureBento";
+import { Hero } from "./components/landing/Hero";
+import { LandingFooter } from "./components/landing/LandingFooter";
+import { Nav } from "./components/landing/Nav";
+import {
+  FinalCTA,
+  HowItWorks,
+  Multisport,
+  ProblemPromise,
+  SecHead,
+  SocialProof,
+} from "./components/landing/Sections";
 
 const Home = (): JSX.Element => {
-  const [openDrawer, setOpenDrawer] = useState(false);
-
-  const aboutAppRef = useRef(null);
-  const applicationFunctionalitiesRef = useRef(null);
-  const waitingListRef = useRef(null);
-
-  const StyledDiv = styled.div`
-    background: url(/bg.png);
-    background-position: center;
-
-    @media (max-width: 768px) {
-      background: none;
-    }
-  `;
+  // Reveal-on-scroll: fade sections in the first time they enter the viewport.
+  useEffect(() => {
+    const els = Array.from(document.querySelectorAll(".reveal"));
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.16, rootMargin: "0px 0px -8% 0px" }
+    );
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
 
   return (
-    <ModalProvider>
-      <main className="bg-white h-screen md:snap-y md:snap-mandatory scroll-smooth overflow-scroll overflow-x-hidden">
-        <Modal />
-        <StyledDiv>
-          <Hero
-            aboutAppRef={aboutAppRef}
-            functionalitiesRef={applicationFunctionalitiesRef}
-            openDrawer={openDrawer}
-            setOpenDrawer={setOpenDrawer}
-            waitingListRef={waitingListRef}
-          />
-        </StyledDiv>
-        <AboutApp myRef={aboutAppRef} />
-        <ApplicationFunctionalities myRef={applicationFunctionalitiesRef} />
-        <WaitingList myRef={waitingListRef} />
-        <Benefits />
-        <ImageSection />
-        <Footer
-          aboutAppRef={aboutAppRef}
-          functionalitiesRef={applicationFunctionalitiesRef}
-          waitingListRef={waitingListRef}
-        />
-        {/* <Drawer isOpen={openDrawer} setIsOpen={setOpenDrawer} /> */}
-      </main>
-    </ModalProvider>
+    <>
+      <div className="s-field" />
+      <div className="s-shell">
+        <Nav />
+        <Hero />
+        <ProblemPromise />
+        <section className="s-section" id="features">
+          <div className="s-wrap">
+            <SecHead
+              eyebrow="Core features"
+              title="Built for match day, end to end."
+              lead="Everything it takes to run a team — and nothing it doesn't."
+            />
+            <div style={{ marginTop: 44 }}>
+              <FeatureBento />
+            </div>
+          </div>
+        </section>
+        <HowItWorks />
+        <Multisport />
+        <SocialProof />
+        <FinalCTA />
+        <LandingFooter />
+      </div>
+    </>
   );
 };
 

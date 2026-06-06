@@ -1,17 +1,17 @@
-import React from "react";
+import type { Metadata } from "next";
+import { SubpageShell } from "../components/landing/SubpageShell";
 import { content } from "./privacy";
-import { Logo } from "@/components/Header";
-import Link from "next/link";
-const Page = () => {
-  return (
-    <div className="container mx-auto py-4 bg-white text-black">
-      <header className="flex justify-between items-center border-b pb-3 mb-6">
-        <Logo />
-      </header>
-      <h1 className="text-3xl font-bold">Terms</h1>
-      <div dangerouslySetInnerHTML={{ __html: content }}></div>
-    </div>
-  );
+
+export const metadata: Metadata = {
+  title: "Privacy Policy — Steerer",
+  description: "How Steerer collects, uses and protects your data.",
 };
+
+const Page = (): JSX.Element => (
+  <SubpageShell eyebrow="Legal">
+    {/* The document carries its own title ("PRIVACY NOTICE") — restyled via .legal__content */}
+    <div className="sub__card legal__content" dangerouslySetInnerHTML={{ __html: content }} />
+  </SubpageShell>
+);
 
 export default Page;
