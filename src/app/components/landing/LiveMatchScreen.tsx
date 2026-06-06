@@ -4,7 +4,7 @@
 // Ticking clock, LIVE pulse, a feed of match events that arrive over
 // time, and working Goal/Card/Sub controls (score from your phone).
 // Ported from the design handoff (liveMatch.jsx).
-import { CSSProperties, useCallback, useEffect, useRef, useState } from "react";
+import { CSSProperties, useCallback, useEffect, useRef, useState, type JSX } from "react";
 import { IconComponent, Icons } from "./icons";
 import { StatusBar } from "./Phone";
 import { TeamCrest } from "./TeamCrest";

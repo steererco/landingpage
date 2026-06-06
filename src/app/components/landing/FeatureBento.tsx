@@ -1,7 +1,7 @@
 // Core feature bento — each card carries a small light "screenshot"
 // of the product to keep it the star.
 // Ported from the design handoff (features.jsx).
-import { ReactNode } from "react";
+import { ReactNode, type JSX } from "react";
 import { Avatar } from "./Avatar";
 import { IconComponent, Icons } from "./icons";
 import { TeamCrest } from "./TeamCrest";

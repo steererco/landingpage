@@ -1,5 +1,5 @@
 // Line icon set — ~1.75px stroke, rounded caps/joins (Steerer DS spec).
-import { ReactNode, SVGProps } from "react";
+import { ReactNode, SVGProps, type JSX } from "react";
 
 export interface IconProps extends Omit<SVGProps<SVGSVGElement>, "stroke"> {
   size?: number;

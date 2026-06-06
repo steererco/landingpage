@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, type JSX } from "react";
 import { FeatureBento } from "./components/landing/FeatureBento";
 import { Hero } from "./components/landing/Hero";
 import { LandingFooter } from "./components/landing/LandingFooter";

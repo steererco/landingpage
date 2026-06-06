@@ -2,6 +2,8 @@
 // their existing routes) and the social row.
 import Link from "next/link";
 
+import type { JSX } from "react";
+
 const COLUMNS: { heading: string; links: { label: string; href: string; external?: boolean }[] }[] =
   [
     {

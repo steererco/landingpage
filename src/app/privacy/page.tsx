@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { SubpageShell } from "../components/landing/SubpageShell";
 import { content } from "./privacy";
 
+import type { JSX } from "react";
+
 export const metadata: Metadata = {
   title: "Privacy Policy — Steerer",
   description: "How Steerer collects, uses and protects your data.",

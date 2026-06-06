@@ -1,6 +1,6 @@
 // Phone bezel + iOS-style status bar for the product mockups.
 // Ported from the design handoff (ui.jsx).
-import { CSSProperties, ReactNode } from "react";
+import { CSSProperties, ReactNode, type JSX } from "react";
 
 export const StatusBar = ({ time = "9:41" }: { time?: string }): JSX.Element => (
   <div

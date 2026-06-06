@@ -1,7 +1,7 @@
 // Avatar — circular user photo with initials fallback and optional
 // status ring. Ported from the Steerer design-system bundle
 // (components/team/Avatar.jsx).
-import { CSSProperties } from "react";
+import { CSSProperties, type JSX } from "react";
 
 interface AvatarProps {
   src?: string;
@@ -48,7 +48,7 @@ export const Avatar = ({
     >
       {src ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={src} alt={name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        (<img src={src} alt={name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />)
       ) : (
         initials || "?"
       )}

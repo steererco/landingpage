@@ -3,6 +3,8 @@ import Link from "next/link";
 import { SubpageShell } from "../components/landing/SubpageShell";
 import { FaqAccordion } from "./FaqAccordion";
 
+import type { JSX } from "react";
+
 export const metadata: Metadata = {
   title: "Help centre — Steerer",
   description: "Answers to common questions about the Steerer app, plus how to reach support.",

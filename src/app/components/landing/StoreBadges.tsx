@@ -1,3 +1,4 @@
+import type { JSX } from "react";
 // App-store badges — dark pills on the light theme, inverted inside
 // the navy CTA card (see globals.css .cta__card overrides).
 export const APP_STORE_URL = "https://apps.apple.com/app/steerer/id6478477404";

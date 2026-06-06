@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { SubpageShell } from "../components/landing/SubpageShell";
 import { content } from "./terms";
 
+import type { JSX } from "react";
+
 export const metadata: Metadata = {
   title: "Terms of Use — Steerer",
   description: "The terms that govern your use of the Steerer app and website.",

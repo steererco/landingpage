@@ -4,6 +4,8 @@ import { LiveMatchScreen } from "./LiveMatchScreen";
 import { PhoneFrame } from "./Phone";
 import { StoreBadges } from "./StoreBadges";
 
+import type { JSX } from "react";
+
 const HEADLINE = ["Run your team.", "Score the match.", "Live."];
 
 export const Hero = (): JSX.Element => (

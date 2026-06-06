@@ -1,7 +1,7 @@
 "use client";
 
 // Sticky top nav — blurs and gains a hairline once the page scrolls.
-import { useEffect, useState } from "react";
+import { useEffect, useState, type JSX } from "react";
 
 export const Nav = (): JSX.Element => {
   const [stuck, setStuck] = useState(false);

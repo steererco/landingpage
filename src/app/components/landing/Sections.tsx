@@ -5,6 +5,8 @@ import { Avatar } from "./Avatar";
 import { MultiScoreboard } from "./MultiScoreboard";
 import { StoreBadges } from "./StoreBadges";
 
+import type { JSX } from "react";
+
 /* ---------------- Problem → Promise ---------------- */
 const CHAOS = ["Group chats", "Spreadsheets", "Paper team sheets", "Lost replies", "Who's playing?"];
 

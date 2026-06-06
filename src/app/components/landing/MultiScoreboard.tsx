@@ -3,7 +3,7 @@
 // Multisport showcase — one product-authentic scoreboard card that
 // morphs to each sport's own scoring system.
 // Ported from the design handoff (scoreboards.jsx).
-import { CSSProperties, useState } from "react";
+import { CSSProperties, useState, type JSX } from "react";
 import { Icons } from "./icons";
 import { TeamCrest } from "./TeamCrest";
 

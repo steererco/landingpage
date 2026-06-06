@@ -1,6 +1,6 @@
 // Shared chrome for content subpages (/help, /privacy, /terms):
 // ambient field + sticky nav + narrow content column + footer.
-import { ReactNode } from "react";
+import { ReactNode, type JSX } from "react";
 import { LandingFooter } from "./LandingFooter";
 import { Nav } from "./Nav";
 

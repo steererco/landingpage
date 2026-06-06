@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useState } from "react";
+import { ReactNode, useState, type JSX } from "react";
 import { Icons } from "../components/landing/icons";
 
 interface FaqEntry {
