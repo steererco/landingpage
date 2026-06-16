@@ -1,9 +1,11 @@
-import type { JSX } from "react";
+"use client";
+import { useEffect, useRef, useState, type JSX } from "react";
 // App-store badges — dark pills on the light theme, inverted inside
 // the navy CTA card (see globals.css .cta__card overrides).
-export const APP_STORE_URL = "https://apps.apple.com/app/steerer/id6478477404";
-export const GOOGLE_PLAY_URL =
-  "https://play.google.com/store/apps/details?id=com.mycompany.steerer&hl=en_US";
+export const APP_STORE_URL = "https://apps.apple.com/us/app/steerer/id6756191290";
+// Android build isn't published yet — the Google Play badge surfaces a
+// "coming soon" toast instead of linking out.
+const GOOGLE_PLAY_TOAST_MS = 2600;
 
 const AppleMark = (): JSX.Element => (
   <svg width={24} height={24} viewBox="0 0 24 24" fill="#fff">
@@ -26,33 +28,58 @@ const GoogleMark = (): JSX.Element => (
   </svg>
 );
 
-export const StoreBadges = (): JSX.Element => (
-  <div className="s-badges">
-    <a
-      href={APP_STORE_URL}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="s-store"
-      aria-label="Download on the App Store"
-    >
-      <AppleMark />
-      <span>
-        <span className="s-store__sub">Download on the</span>
-        <span className="s-store__main">App Store</span>
-      </span>
-    </a>
-    <a
-      href={GOOGLE_PLAY_URL}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="s-store"
-      aria-label="Get it on Google Play"
-    >
-      <GoogleMark />
-      <span>
-        <span className="s-store__sub">GET IT ON</span>
-        <span className="s-store__main">Google Play</span>
-      </span>
-    </a>
-  </div>
-);
+export const StoreBadges = (): JSX.Element => {
+  const [toast, setToast] = useState(false);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  // Clear any pending dismissal timer if the component unmounts mid-toast.
+  useEffect(
+    () => () => {
+      if (timer.current) clearTimeout(timer.current);
+    },
+    []
+  );
+
+  const showComingSoon = () => {
+    setToast(true);
+    if (timer.current) clearTimeout(timer.current);
+    timer.current = setTimeout(() => setToast(false), GOOGLE_PLAY_TOAST_MS);
+  };
+
+  return (
+    <div className="s-badges">
+      <a
+        href={APP_STORE_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="s-store"
+        aria-label="Download on the App Store"
+      >
+        <AppleMark />
+        <span>
+          <span className="s-store__sub">Download on the</span>
+          <span className="s-store__main">App Store</span>
+        </span>
+      </a>
+      <button
+        type="button"
+        onClick={showComingSoon}
+        className="s-store"
+        aria-label="Google Play — coming soon"
+      >
+        <GoogleMark />
+        <span>
+          <span className="s-store__sub">GET IT ON</span>
+          <span className="s-store__main">Google Play</span>
+        </span>
+      </button>
+      <div
+        className={`s-toast${toast ? " s-toast--on" : ""}`}
+        role="status"
+        aria-hidden={!toast}
+      >
+        Android app coming soon
+      </div>
+    </div>
+  );
+};

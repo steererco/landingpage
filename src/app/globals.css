@@ -232,6 +232,8 @@ body {
   border: 1px solid transparent;
   color: #fff;
   text-decoration: none;
+  cursor: pointer;
+  font: inherit;
   box-shadow: 0 12px 28px -16px rgba(0, 12, 84, 0.6);
   transition: transform 0.16s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.16s,
     background 0.16s;
@@ -267,6 +269,42 @@ body {
   line-height: 1;
   letter-spacing: -0.01em;
   white-space: nowrap;
+}
+
+/* "Android coming soon" toast — shown when the Google Play badge is tapped.
+   Top-center so it clears the bottom-anchored cookie banner (z-index 90). */
+.s-toast {
+  position: fixed;
+  left: 50%;
+  top: 86px;
+  z-index: 100;
+  transform: translate(-50%, -12px);
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: #0a1230;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  box-shadow: 0 18px 40px -16px rgba(0, 12, 84, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0.22s;
+}
+.s-toast--on {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .s-toast {
+    transition: opacity 0.22s ease, visibility 0.22s;
+    transform: translate(-50%, 0);
+  }
 }
 
 /* ---------- Top nav ---------- */
